@@ -14,6 +14,7 @@
         },
         {
             "title": "Provision Oracle Integration Instance",
+            "description":"Provisioning OIC Instance",
             "filename": "../../provision/provision.md"
         },
         {

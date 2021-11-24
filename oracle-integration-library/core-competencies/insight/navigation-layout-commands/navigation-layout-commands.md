@@ -28,9 +28,9 @@ In Models, starting left to right, you will see the search tool, filter tool, re
 ### Consoles
 Click Consoles ![console](./images/console.jpg " ") to view consoles. 
 ![consolepage](./images/consolepage.jpg " ")
-In Consoles, starting left to right, you will see the search tool, filter tool, the number of how many consoles are listed, refresh, list horizontal, or list by block. 
+In Consoles, starting left to right, you will see the search tool, filter tool, count of consoles available in teh instance is displayed, refresh, list horizontal, or list by block. 
 ![consolepage2](./images/consolepage2.jpg " ")
-Consoles are created once you activate a model and will have different icons next to the respective titles. You will see the Name, Favorite start, its Status, the Status Last Updated date/timestamp and Today's Business Transactions.
+Consoles are created once you activate a model and will have different icons next to the respective titles. You will see the Name, Favorite Star, its Status, the Status Last Updated date/timestamp and Today's Business Transactions.
 
 ### Dashboards
 ![Dashboards](./images/feb2021-opp-order-console.jpg " ") <br />

@@ -19,7 +19,7 @@ In this workshop, you will:
 Click the hamburger ![hamburger](./images/hamburger.jpg " ")at the top left hand site of the home screen. Click on the Insight ![insight](./images/insight.jpg " ") and you will see Consoles and Models.
 
 ### Models
-Click on Models ![cmodels](./images/models.jpg " ") to commence creating or modify models.
+Click on Models ![models](./images/models.jpg " ") to commence creating or modify models.
 ![modelpage](./images/modelpage.jpg " ")
 In Models, starting left to right, you will see the search tool, filter tool, refresh, list horizontal, or list by block. Above that you will see the Import button or Create button.
 

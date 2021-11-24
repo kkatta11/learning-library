@@ -9,7 +9,7 @@ To use Insight to monitor a business process in Oracle Integration, there are se
 
 The high-level workflow is as follows:
 
-Create a model, defining milestones, a unique instance identifier, indicators, and alerts.
+Create a model, define milestones, a unique instance identifier, indicators, and alerts.
 Associate the model to a business process implementation by mapping model milestones to the business process implementation.
 Activate the model to allow business executives to view and analyze business processes in real time using dashboards.
 
@@ -21,7 +21,7 @@ In this lab, you will learn how to create the following:
 
 First practice the steps to familiarize yourself with the commands and then do the exercise.
 
-The Model has Milestone(s), and an Identifier which is mapped to one, or more, of the milestone(s). The Initial creation of a Model is called a Draft; which is not activated and can be modified, but not visable in the Console.
+The Model has Milestone(s), and an Identifier which is mapped to one, or more, of the milestone(s). The Initial creation of a Model is called a Draft; which is not activated and can be modified, but not visible in the Console.
 ### Model Steps
 
     A. Open Oracle Insight

@@ -53,7 +53,7 @@ Here is the proposed business process flow as shown below:
 
   - When the Store Manager is done editing their request in the Resubmit web form, they press the **Submit** button. This generates a workflow task for the Regional Manager at the **Approve Request** human activity to review the same order request again. The Accept/Reject process continues as shown above.
 
-      ![](./images/image1.png)
+      ![Work Flow Request](./images/image1.png)
 
       The solution will provide the following business values for Mama Maggy:
 
@@ -75,6 +75,6 @@ Search for **Oracle Integration (Application Integration)** if you are intereste
 
 ## Acknowledgements
 
-- **Author** -
-- **Contributors** -  Michelle Malcher, May 2022
-- **Last Updated By/Date** -
+- **Author** - Wallence Wong, January 2022
+- **Contributors** -  Michelle Malcher, Lucy Cortez May 2022
+- **Last Updated By/Date** - June 2022

@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop shows you how to create two connections using Oracle Integration - One for a File Server and one for an On Oracle Autonomous Database. You will learn how to create an integration flow that reads a file from the File Server and insert records into Oracle Autonomous Database.
+In this workshop, we shall talk about provisioning Oracle Integration instance, enabling File Server and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration. You will learn how to create an integration flow that reads a file from the File Server and insert records into Oracle Autonomous Database.
 
 Estimated Time: 1 hour 30 minutes
 
@@ -27,8 +27,6 @@ Integration is a fundamental part of your digital business development. It invol
 
 ![Connect and Automate](./images/connect-and-automate.png)
 
-With Oracle Integration (OIC), you have the power to *integrate* your cloud and on-premises applications, *automate* business processes, *gain insight* into your business processes, visually *develop* web and mobile applications, use an SFTP-compliant file server to *store* and *retrieve* files, and *exchange* business documents with a B2B trading partner—all in one place.
-
 Critical business processes, such as those related to human capital management (HCM), customer experience (CX), and enterprise resource planning (ERP), are frequently slow and inflexible. For example, a multi-step process such as Lead to Opportunity to Quote to Order can involve four or more applications and require human exception management at every step of the process. In this scenario, the lack of integration between departments as well as the delays caused by human-based problem resolution can result in lost revenue, frustrated customers, and high costs.
 
 Oracle Integration changes all that. It empowers you to:
@@ -52,6 +50,6 @@ You may now **proceed to the next lab**.
 * [Oracle Integration](https://docs.oracle.com/en/cloud/paas/integration-cloud/index.html)
 
 ## Acknowledgements
-
-* **Author** - Kishore Katta, Product Management, Oracle Integration & Process Automation
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
+* **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
+* **Last Updated By/Date** - Subhani Italapuram, July 2022

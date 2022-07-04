@@ -23,9 +23,9 @@ This lab assumes you have:
 ## Task 1: Initiate a Scheduled Integration Flow
 We will start by creating a new integration and adding some basic info.
 
-1. In the left Navigation pane, click **Integrations** > **Integrations**.
+1. In the left Navigation pane, click **Design** > **Integrations**.
 2. On the Integrations page, click **Create**.
-3. On the *Integration Style* dialog, select **Scheduled Orchestration**, followed by **Select**.
+3. On the *Create integration* dialog, select **Scheduled Orchestration**, followed by **Create**.
 
     ![Select Integration Style](images/select-integration-style.png)
 

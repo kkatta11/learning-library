@@ -44,8 +44,7 @@ If you just created a new Cloud account following the instructions in Getting St
 | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- |
 | Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
-| Consumption Model |Lists consumption models available in this tenancy. Typically, one model (Metered) is displayed, but multiple consumption models are listed if your tenancy is enabled for more than one. Available models include:<p></p><ul><li>Metered (Universal Credit)</li></ul><ul><li>Subscription (OIC4SaaS)</li></ul><ul><li>Oracle Integration Government</li></ul>|
-| Edition | Select Enterprise. Two editions are provided. See [Oracle Integration Editions](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/oracle-integration-editions.html#GUID-ED23D612-B34E-400D-8039-DBCEF5101AF4) to see what's licensed in each edition.|
+| Version|Lists Version available in this tenancy. Select OCI Application Integration for Gen3 instance.
 | License Type |Select - Subscribe to a new Oracle Integration License|
 | Message Packs |1|
 | Access Token | If this field is displayed, you are creating an instance as a non-federated user. Sign in as a federated user and restart creating an instance.|
@@ -72,5 +71,5 @@ Navigate to an Oracle Integration instance in the Oracle Cloud Infrastructure Co
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
-* **Contributors** - Subhani Italapuram, Oracle Integration Product Management
+* **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Oracle Integration team, December 2021

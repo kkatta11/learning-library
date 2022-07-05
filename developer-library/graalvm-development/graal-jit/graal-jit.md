@@ -22,18 +22,24 @@
 
 ## Task 1: サンプルアプリケーションの導入  
 
-このサンプルはオープンソースのJavaベンチマークツールであるJava Microbenmark Harness(JMH)
-を利用して、配列の各要素に対する単純な計算を行うJavaプログラムです。  
+このサンプルはオープンソースのJavaベンチマークツールである[Java Microbenmark Harness(JMH)](https://github.com/openjdk/jmh)
+を利用して、配列の各要素に対する単純な計算、集計を行うJavaプログラムです。  
 プログラムを3回の反復実行による平均時間（ナノ秒）を計測します。GraalコンパイラとC2コンパイラでそれぞれ実行し、平均時間を比較します。
 
 1. サンプルアプリケーションをダウンロードします。  
-  コマンドプロンプトを立ち上げ、SSHキーを保存しているディレクトリー配下より演習用インスタンスに接続します。
+    <!--コマンドプロンプトを立ち上げ、SSHキーを保存しているディレクトリー配下より演習用インスタンスに接続します。
+    
     ```
     <copy>ssh -i <your-private-key-file> opc@<x.x.x.x></copy>
 
-    ```  
+    ``` 
+    -->
     
-    GitHubに公開されているGraalVMサンプルのリポジトリを複製（クローン）します。
+    ```
+    <copy>cd ~</copy>
+    ```
+
+    GitHubに公開されているGraalVMサンプルのリポジトリを複製します。
 
     ```
     <copy>git clone https://github.com/graalvm/graalvm-demos.git</copy>
@@ -47,7 +53,7 @@
     <copy>cd java-simple-stream-benchmark</copy>
     ```
 
-    > **Note:** 上記サンプル以外に、GraalVMの[複数サンプル](https://github.com/graalvm/graalvm-demos)をご参照頂けます。
+    > **Note:** 上記サンプル以外に、GraalVM関連の[複数サンプル](https://github.com/graalvm/graalvm-demos)を参照できます。
 
 2. サンプルコードの中身を確認します。
 
@@ -56,10 +62,9 @@
     ```
     <copy>nano src/main/java/org/graalvm/demos/JavaSimpleStreamBenchmark.java</copy>
     ```
-    > **Note:** nanoエディタを終了する場合、nanoエディタの下部に表示されたショートカットキーを押します。CTRL+Xを押すことで、ファイルの編集内容を保存するかどうかをYesまたはNo、Cancelの形で尋ねられます。それぞれY、N、CTRL+Cで対応します。
-
+    
     サンプルソースの中で、int型の配列の各要素に対し、Java Stream APIを利用して様々な計算処理を行います。  
-    またJMHの仕様に従ってウォームアップの回数、反復回数、計測対象モード（平均時間）などのベンチマーク仕様をアノテーション形式で規定しています。
+    また[JMH](https://github.com/openjdk/jmh)の仕様に従ってウォームアップの回数(@Warmup)、反復回数(@Measurement)、計測対象モード（@BenchmarkMode）などのベンチマーク仕様をアノテーション形式で規定しています。
 
     ```
     package org.graalvm.demos;
@@ -88,13 +93,31 @@
       }
     }
     ```
+    CTRL+Xを押下し、nanoエディタからExitします。
+
+    > **Note:** ファイルを編集後nanoエディタを終了する場合、nanoエディタの下部に表示されたショートカットキーを押します。CTRL+Xを押すことで、ファイルの編集内容を保存するかどうかをYesまたはNo、Cancelの形で尋ねられます。それぞれY、N、CTRL+Cで対応します。
 
 ## Task 2: ベンチマークを含むプロジェクトのビルドおよび実行
 
-1. 演習１で導入したMavenを利用してプロジェクトをビルドします。
+1. 演習１で導入したMavenを使用してプロジェクトをビルドします。
+
+    以下のコマンドでmavenビルドに必要なライブラリをダウンロードします。
+    ```
+    <copy>cd ~</copy>
+    ```
+    ```
+    <copy>
+    wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/m2.tar.gz
+    </copy>
+    ```
+    ```
+    <copy>tar zxvf  m2.tar.gz</copy>
+    ```
+    
+    ```java-simple-stream-benchmark```配下に移動し、アプリケーションをビルドします。
 
     ```
-    <copy>cd java-simple-stream-benchmark</copy>
+    <copy>cd graalvm-demos/java-simple-stream-benchmark</copy>
     ```
 
     ```
@@ -122,6 +145,7 @@
 	```
   <copy>java -XX:-UseJVMCICompiler -jar target/benchmarks.jar</copy>
   ```
+  Graalコンパイラと従来のC2コンパイラの実行結果Score（＝平均実行時間)を比較してみてください。
 
 5. Graal JIT Compiler
 
@@ -136,10 +160,18 @@
   Benchmark                             Mode  Cnt    Score    Error  Units
 JavaSimpleStreamBenchmark.testMethod  avgt    3  250.740 ± 37.220  ns/op
     ```
+  このベンチマークでは、Graal コンパイラのScore(＝平均実行時間)がC2コンパイラより5分の1に短縮された結果となっています。
 
+  サンプルソースの中のアノテーション(@Measurementなど）を調整して、反復回数や表示モードを変更してベンチマークを実施してみてください。
+
+## Learn More
+
+*参考リンク*
+* [graalvm-demos](https://github.com/graalvm/graalvm-demos)
+* [Java Microbenmark Harness(JMH)](https://github.com/openjdk/jmh)
 
 ## Acknowledgements
 
 - **Created By/Date** - Jun Suzuki, Java Global Business Unit, April 2022
-- **Contributors** - 
-- **Last Updated By/Date** - Jun Suzuki, April 2022
+- **Contributors** - James Connors, Madhusudhan Rao, David Start 
+- **Last Updated By/Date** - Jun Suzuki, May 2022

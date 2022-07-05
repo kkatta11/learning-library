@@ -13,7 +13,8 @@ Oracle Analytics Server helps organizations discover deep, unique insights from 
   [](youtube:Dk9vLite0MA)
 
 ### Objectives
-The workshop illustrates how organizations worldwide rely on Oracle to manage their data and uncover value across the entire data lifecycle: creating and blending data, self-service data visualization and analysis, securely collaborating and sharing analysis across teams, and leveraging embedded augmented analytics and machine learning capabilities to deliver the fastest time to insight across all of your data
+The workshop illustrates how organizations worldwide rely on Oracle to manage their data and uncover value across the entire data lifecycle: creating and blending data, self-service data visualization and analysis, securely collaborating and sharing analysis across teams, and leveraging embedded augmented analytics and machine learning capabilities to deliver the fastest time to insight across all of your data.
+
 Throughout this lab you will:
   -	Review the key features of self-service analytics
   -	Tell a story regarding what is happening at Bobby's Burgers & Fries

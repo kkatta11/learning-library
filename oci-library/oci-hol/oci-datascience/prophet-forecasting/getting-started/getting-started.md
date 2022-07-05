@@ -17,7 +17,7 @@ In this lab you will:
 
 ## **Task 1:** Provision OCI Data Science
 
-This guide shows how to use the Resource Manager to provision the service using Resource Manager. This process is mostly automated. However, if you prefer a step-by-step manual approach to control every aspect of the provisioning, please follow the following instructions instead: [manual provisioning steps](https://docs.cloud.oracle.com/en-us/iaas/data-science/data-science-tutorial/tutorial/get-started.htm#concept_tpd_33q_zkb).
+This guide shows how to use the Resource Manager to provision Data Science using Resource Manager. This process is mostly automated. However, if you prefer a step-by-step manual approach to control every aspect of the provisioning, please follow the following instructions instead: [manual provisioning steps](https://docs.cloud.oracle.com/en-us/iaas/data-science/data-science-tutorial/tutorial/get-started.htm#concept_tpd_33q_zkb).
 
 1. Download the terraform configuration source
 
@@ -36,7 +36,7 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 5. Select the configuration source you download earlier
 
-    Select ".ZIP" and drag the file you downloaded to the box.
+    Select ".ZIP" and drag the file you downloaded into the box.
 
     ![Configuration Zip](./images/select-zip.png)
 
@@ -78,7 +78,7 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 14. Click Apply once more to confirm the submission of the job.
 
-   Provisioning should take about 5 minutes after which the status of the Job should become "Succeeded".
+   Provisioning should take about 5 minutes. Once complete, the status of the Job should become "Succeeded".
 
 15. Create Oracle Data Science Project
 
@@ -107,7 +107,7 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 ## **Task 2:** Open the OCI Data Science Notebook
 
-1. Open the notebook that was provisioned
+1. Open the notebook that was provisioned.
 
    The name of the notebook may be different than shown here in the screenshot.
 
@@ -132,7 +132,7 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 ## **Task 4:** Upload the Notebook and Data
 
-1. Download the notebook and save it on your machine.
+1. Download the notebook and save it on your virtual machine.
 
    The .ipynb notebook is accessed through a Pre Authenticated Request (PAR) in OCI Object Storage. Inside the data science notebook session, open the terminal.
 
@@ -156,9 +156,9 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 2. Upload the Data
 
-   The CSV file that consists of the retail data is also stored in OCI Object Storage.
+   The CSV file that consists of the retail data is stored in OCI Object Storage.
 
-   Similar to the last step, open the terminal and run the following command to download the CSV file to the Data Science Notebook Session.
+   Similar to the last step, open the terminal and run the following command to download the CSV file inside the Data Science Notebook Session.
 
    ```python
    <copy>
@@ -183,7 +183,7 @@ This guide shows how to use the Resource Manager to provision the service using 
 
 4. Install fbprophet
 
-   Next you will have to install the package fbprophet on the kernel. Fbprophet is a Python library that consists of useful time series forecasting tools.
+   Next you will have to install the package fbprophet to the kernel. Fbprophet is a Python library that consists of useful time series forecasting tools.
 
    Run the first cell installs fbprophet and upgrades plotly and pandas libraries.
 

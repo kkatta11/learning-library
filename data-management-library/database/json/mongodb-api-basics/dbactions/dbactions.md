@@ -27,26 +27,26 @@ In this lab, you will:
 
 <if type="freetier">
 
-2. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **Region** in the top, right hand corner of the page.
+2. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **Region** in the top, right-hand corner of the page.
 
     ![Select region on the far upper-right corner of the page.](./images/region.png " ")
 
 </if>
 <if type="livelabs">
 
-2. If you are using a LiveLabs account, you need to be in the region your account was provisioned in. You can see your current default **Region** in the top, right hand corner of the page. Make sure that it matches the region on the LiveLabs Launch page.
+2. If you are using a LiveLabs account, you need to be in the region your account was provisioned in. You can see your current default **Region** in the top, right-hand corner of the page. Make sure that it matches the region on the LiveLabs Launch page.
 
     ![Select region on the far upper-right corner of the page.](./images/region.png " ")
 
 </if>
 
-3. Click the navigation menu in the upper left to show top level navigation choices.
+3. Click the navigation menu in the upper left to show top-level navigation choices.
 
 4. Click on **Oracle Database** and choose **Autonomous JSON Database**.
 
     ![Click Autonomous JSON Database](./images/adb-json.png " ")
 
-5. Use the __List Scope__ drop-down menu on the left to select the same compartment where you created your Autonomous JSON Databae in Lab 2. Make sure your workload type is __JSON Database__. <if type="livelabs">Enter the first part of your user name, for example `LL185` in the Search Compartments field to quickly locate your compartment.
+5. Use the __List Scope__ drop-down menu on the left to select the same compartment where you created your Autonomous JSON Database in Lab 2. Make sure your workload type is __JSON Database__. <if type="livelabs">Enter the first part of your user name, for example `LL185` in the Search Compartments field to quickly locate your compartment.
 
     ![Check the workload type on the left.](images/livelabs-compartment.png " ")
 
@@ -92,7 +92,7 @@ In this lab, you will:
 
     After the tour, you should see the 'emp' collection you created in Mongo Shell on the left. If it's not shown, click the refresh circle.
 
-    The left hand side shows collections. The upper right allows us to run queries, and the lower right shows the documents found by that query. An empty search - {} - will show all documents, which is what you should be looking at now. You can confirm using the scroll bar that there are three documents for Blake (Intern), Smith and Miller (Programmers).
+    The left-hand side shows collections. The upper right allows us to run queries, and the lower right shows the documents found by that query. An empty search - {} - will show all documents, which is what you should be looking at now. You can confirm using the scroll bar that there are three documents for Blake (Intern), Smith and Miller (Programmers).
 
 2. Let's go ahead and do a search. Enter {"job": "Programmer"} in the search box and press the Run Query button. Case **is** significant, so be careful, or copy the query below:
 
@@ -112,7 +112,7 @@ In this lab, you will:
 
     ![miller salary](./images/miller-salary.png " ")
 
-    We can now see that Miller's salary is 80000. Let's add another document to the collection. Click on the "New JSON Document" button immediately below the the collection name on the top panel.
+    We can now see that Miller's salary is 80000. Let's add another document to the collection. Click on the "New JSON Document" button immediately below the collection name on the top panel.
 
     ![new document button](./images/new-document-button.png " ")
 
@@ -135,7 +135,7 @@ In this lab, you will:
 
     Click the "Clear" button for the existing search, then run another empty search to see all documents.
 
-    **Caution:** the same "trashcan" icon is used in two place in the JSON workshop. To the right of "add clause" it means "Clear the current search". On the top row, it means "Delete all documents found by the current query". Don't delete your documents by accident!
+    **Caution:** the same "trashcan" icon is used in two places in the JSON workshop. To the right of "add clause" it means "Clear the current search". On the top row, it means "Delete all documents found by the current query". Don't delete your documents by accident!
 
     Finally, let's sort the results of our query, in descending order of salary (so highest first).
 
@@ -143,11 +143,11 @@ In this lab, you will:
 
     ![order by](./images/order-by.png " ")
 
-    That will change our query to have two parts - a $query part and a $orderby part. The $query part is the default if neither are specified.
+    That will change our query to have two parts - a $query part and a $orderby part. The $query part is the default if neither is specified.
 
     $query still contains our empty search - {}.
 
-    We need to complete some details for the $orderby. We want to sort by salary, so change the path to "salary". It's a number, so change datatype from "varchar2" to "number". And finally change the order from "asc" (ascending) to "desc" (descending), so we get largest first. 
+    We need to complete some details for the $orderby. We want to sort by salary, so change the path to "salary". It's a number, so change datatype from "varchar2" to "number". And finally, change the order from "asc" (ascending) to "desc" (descending), so we get largest first. 
 
     ![orderby edit](./images/orderby-edit.png " ")
 
@@ -165,13 +165,13 @@ In this lab, you will:
 
     ![new collection](./images/new-collection.png " ")
 
-    You can refresh the collection list on the left hand side to check the new collection is there.
+    You can refresh the collection list on the left-hand side to check the new collection is there.
 
     After that, we're ready to move on to the next task.
 
 ## Task 3: SQL in Database Actions
 
-So far we've looked at a documemt-centric view of our data, from Mongo Shell and from Oracle's JSON workshop.
+So far we've looked at a document-centric view of our data, from Mongo Shell and from Oracle's JSON workshop.
 
 Now we're going to look at a SQL view of the same data, showing how you can swap between document and SQL views.
 
@@ -187,7 +187,7 @@ Now we're going to look at a SQL view of the same data, showing how you can swap
 
 2.  Examine the EMP table
 
-    On the left hand panel, we will see all the tables in our database. Notice that there are two tables, EMP and NEWCOLLECTION.
+    On the left-hand panel, we will see all the tables in our database. Notice that there are two tables, EMP and NEWCOLLECTION.
     These correspond with the two collections we created - "emp" from Mongo Shell and "newcollection" from JSON.
 
     Open the EMP collection by clicking on the triangle next to it, to list the columns in the table.
@@ -299,7 +299,7 @@ Now we're going to look at a SQL view of the same data, showing how you can swap
 
     That created a view based on the elements within our JSON. On the left hand side, choose "Views" rather than "Tables" and open the "EMP_VIEW" view.
 
-    You can see that our view contains the "housekeeping" data from our EMP table, plus the various elements from the JSON. Note that columns such as "job", "name" etc are in lower-case - case is significant for JSON, and "NAME" would be a different element to "name", so the case is maintained in the view. That means to refer to any of these colums, we must put them in double quotes, otherwise SQL will upper-case them.
+    You can see that our view contains the "housekeeping" data from our EMP table, plus the various elements from the JSON. Note that columns such as "job", "name" etc are in lower-case - case is significant for JSON, and "NAME" would be a different element to "name", so the case is maintained in the view. That means to refer to any of these columns, we must put them in double quotes, otherwise SQL will upper-case them.
 
     So let's run a query against the view. We no longer need to use the dot notation, but as noted above we do need to quote the column names. We're going to figure out how much of our company's salary bill is spent on each job. We'll do that with an aggregation query:
 

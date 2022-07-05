@@ -95,7 +95,7 @@ In this task, you perform failure recovery using the following steps.
     /opt/oracle/oradata/CDB1/pdb1/sysaux01.dbf
     /opt/oracle/oradata/CDB1/pdb1/undotbs01.dbf
     /opt/oracle/oradata/CDB1/pdb1/users01.dbf
-    /opt/oracle/homes/OraDB21Home/dbs/octs.dbf
+    /opt/oracle/homes/OraDB21Home1/dbs/octs.dbf
     ```
 
 6. Use the following command to close the pluggable database.
@@ -114,7 +114,7 @@ In this task, you perform failure recovery using the following steps.
 
 8. Use the following Linux command to delete the data file belonging to `appuser``.`
     ```
-    $ <copy>rm /opt/oracle/homes/OraDB21Home/dbs/octs.dbf</copy>
+    $ <copy>rm /opt/oracle/homes/OraDB21Home1/dbs/octs.dbf</copy>
     ```
 
 9. Use the exit command to return to SQL\*Plus prompt.
@@ -135,7 +135,7 @@ In this task, you perform failure recovery using the following steps.
     ERROR at line 1:
     ORA-01157: cannot identify/lock data file 13 - see DBWR trace file
     ORA-01110: data file 13:
-    '/opt/oracle/homes/OraDB21Home/dbs/octs.dbf'
+    '/opt/oracle/homes/OraDB21Home1/dbs/octs.dbf'
     ```
 
 11. Exit the SQL\*Plus prompt.
@@ -207,7 +207,7 @@ In this task, you perform failure recovery using the following steps.
 
     Optional Manual Actions
     =======================
-    1. If file /opt/oracle/homes/OraDB21Home/dbs/octs.dbf was unintentionally renamed or moved, restore it
+    1. If file /opt/oracle/homes/OraDB21Home1/dbs/octs.dbf was unintentionally renamed or moved, restore it
 
     Automated Repair Options
     ========================
@@ -244,7 +244,7 @@ In this task, you perform failure recovery using the following steps.
 
     channel ORA_DISK_1: starting datafile backup set restore
     channel ORA_DISK_1: specifying datafile(s) to restore from backup set
-    channel ORA_DISK_1: restoring datafile 00013 to /opt/oracle/homes/OraDB21Home/dbs/octs.dbf
+    channel ORA_DISK_1: restoring datafile 00013 to /opt/oracle/homes/OraDB21Home1/dbs/octs.dbf
     channel ORA_DISK_1: reading from backup piece /opt/oracle/recovery_area/CDB1/D33E529B0AE432F7E053F5586864ED09/backupset/2021_12_16/o1_mf_nnndf_TAG20211216T075421_jvow6k4f_.bkp
     channel ORA_DISK_1: piece handle=/opt/oracle/recovery_area/CDB1/D33E529B0AE432F7E053F5586864ED09/backupset/2021_12_16/o1_mf_nnndf_TAG20211216T075421_jvow6k4f_.bkp tag=TAG20211216T075421
     channel ORA_DISK_1: restored backup piece 1
@@ -337,4 +337,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author**: Suresh Mohan, Database User Assistance Development Team
 - **Contributors**: Suresh Rajan, Manish Garodia, Subhash Chandra, Ramya P
-- **Last Updated By & Date**: Suresh Mohan, May 2022
+- **Last Updated By & Date**: Suresh Mohan, June 2022

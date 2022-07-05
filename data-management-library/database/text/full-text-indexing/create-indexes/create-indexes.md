@@ -83,20 +83,22 @@ In this lab, you will:
     ![sql tour](./images/sql-tour.png " ")
 
 
-2. We will create a simple table with one numeric column and one text column. Copy the following into the 'Worksheet' area and press the "Run Statement" button:
+2. We will create a simple table to keep mock user sales records. It contains a numeric column for record ID, a varchar column for customer name, another numeric column for sales amount, and another varchar column for note. Copy the following into the 'Worksheet' area and press the "Run Statement" button:
 
     ```
     <copy>
-    create table mytable (
-        numcol number,
-        text   varchar2(80)
+    create table user_data
+    (id number,
+     name varchar2(100),
+     amount number(17,2),
+     note varchar2(2000)
     )
     </copy>
     ```
 
     ![create table](./images/create-table.png " ")
 
-    You should see a message "Table MYTABLE created". On the left side of the screen, click the "Refresh" button to see your new table in the table list.
+    You should see a message "Table USER_DATA created". On the left side of the screen, click the "Refresh" button to see your new table in the table list.
 
     ![create table result](./images/create-table-result.png " ")
 
@@ -106,12 +108,12 @@ In this lab, you will:
 
     ```
     <copy>
-    insert into mytable
-        select 10, 'the quick brown fox jumps over the lazy dog' from dual
+    insert into user_data
+        select 1, 'John Smith', 123.45, 'First order from John Smith.' from dual
             union
-        select 20, 'the quick brown fox jumps over the lazy fox' from dual
+        select 2, 'Mary Poppins', 67.89, 'First ever order from Marie Poppins.' from dual
             union
-        select 30, 'a lazy brown fox jumps quickly' from dual
+        select 3, 'John Smith', 99.45, 'Second order from Johnny Smith.' from dual
     </copy>
     ```
 
@@ -125,7 +127,7 @@ In this lab, you will:
 
     ```
     <copy>
-    select * from mytable
+    select * from user_data
     </copy>
     ```
 
@@ -143,7 +145,7 @@ Text indexes are an example of a **domain index**. Domain indexes are specialize
 
     ```
     <copy>
-    create index myindex on mytable(text) indextype is ctxsys.context
+    create index myindex on user_data(note) indextype is ctxsys.context
     </copy>
     ```
 
@@ -174,7 +176,7 @@ Text indexes are an example of a **domain index**. Domain indexes are specialize
 
     ![ctx_user_indexes view](./images/ctx_user_indexes.png)
 
-    That tells us that our index MYINDEX is created on table MYTABLE, column TEXT.
+    That tells us that our index MYINDEX is created on table USER_DATA, column NOTE.
 
 3.  Look at the underlying tables created.
 
@@ -200,11 +202,11 @@ Text indexes are an example of a **domain index**. Domain indexes are specialize
 
     You may want to expand the output window upwards so you can see the full list of indexed words.
 
-    Notice anything about the list? Not all the words in the text appear - "a" and "the" are missing. That's because those
-    are designated "stop words" - common words that are not very useful in searches, but are likely to take a lot of space
+    Notice anything about the list? Not all the words in the text appear - "from" is missing. That's because it is designated "stop word" - common words that are not very useful in searches, but are likely to take a lot of space
     in the index. By default, we don't index them - though using advanced options we can tell the system to index all words,
     or provide a "custom stoplist" of words we don't want indexed. The default list of stopwords will vary with language and
     will depend on the default language setting for the database (always English for Autonomous Database).
+    You can customize your stop word list following the examples here: [Create Stop List](https://docs.oracle.com/en/database/oracle/oracle-database/19/ccref/CTX_DDL-package.html#GUID-3336B8E9-13FB-4997-A9AD-8D9A207B10C4) and [Add Stop Word] (https://docs.oracle.com/en/database/oracle/oracle-database/19/ccref/CTX_DDL-package.html#GUID-5D27665E-8ECC-4703-94CC-83387BB7ABCD).
     
     We don't need to know anything about the underlying index tables at the moment. But it's useful to see the words that are indexed,
     and it can sometimes be worth refering to this list when trying to figure out why a particular query acts as it does (queries

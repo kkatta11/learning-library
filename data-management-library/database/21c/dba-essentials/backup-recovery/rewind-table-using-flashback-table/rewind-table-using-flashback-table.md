@@ -90,18 +90,25 @@ In this task, you simulate user error by changing data in the `appuser.regions` 
     2021-12-16 08:08:39
     ```
 
-3. Simulate user error by executing the following commands. It will change the value in the `name` column to 'ORACLE' in all the rows of the table and then commit it.
+3. Simulate user error by executing the following commands. It will change the value in the `name` column to 'ORACLE' in all the rows of the table.
     ```
     SQL> <copy>update appuser.regions set name = 'ORACLE';</copy>
-    SQL> commit;
     ```
     Output:
     ```
     3 rows updated.
+    ```
+
+4. Commit.
+    ```
+    SQL> <copy>commit;</copy>
+    ```
+    Output:
+    ```
     Commit complete.
     ```
 
-4. Query the `appuser.regions` table again to verify that the `name` column for all the rows is updated to 'ORACLE'.
+5. Query the `appuser.regions` table again to verify that the `name` column for all the rows is updated to 'ORACLE'.
     ```
     SQL> <copy>select * from appuser.regions;</copy>
     ```
@@ -151,4 +158,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author**: Suresh Mohan, Database User Assistance Development Team
 - **Contributors**: Suresh Rajan, Manish Garodia, Subhash Chandra, Ramya P
-- **Last Updated By & Date**: Suresh Mohan, May 2022
+- **Last Updated By & Date**: Suresh Mohan, June 2022

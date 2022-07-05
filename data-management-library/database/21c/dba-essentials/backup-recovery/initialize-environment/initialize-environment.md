@@ -28,16 +28,17 @@ In this task, you set up the environment using the following steps.
 
 3. Run the command `oraenv` to set the environment variables.
     ```
-    $ <copy>./oraenv</copy>
+    $ <copy>. oraenv</copy>
     ```
 
-4. Enter Oracle SID `CDB1`.
+4. Enter the Oracle SID, for this lab it is `CDB1`.
     ```
-    ORACLE_SID = [oracle] ? <copy>CDB1</copy>
+    ORACLE_SID = [oracle] ? CDB1
 
     The Oracle base has been set to /opt/oracle
     ```
     This command also sets the Oracle home path to `/opt/oracle/product/21c/dbhome_1`.
+    >**Note:** Oracle SID is case sensitive.
 
 You have set the environment variables for the active terminal session. You can now connect to Oracle Database and run the commands.
 
@@ -49,7 +50,7 @@ Alternatively, you may run the script file `.set-env-db.sh` from the home locati
 
 In this task, you download and execute the SQL script file using the following steps.
 
-1. Download and save the [backup-and-recovery-operations-prerequisities.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/wVaLF_P62mfpzEzA7rRaCh7CgG8WtfStsG5MQ_kmRI6JkWNwErWWnQREmO0FLXcv/n/c4u04/b/livelabsfiles/o/labfiles/backup-and-recovery-operations-prerequisities.zip) file.
+1. Download and save the [backup-and-recovery-operations-prerequisities.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/wVaLF_P62mfpzEzA7rRaCh7CgG8WtfStsG5MQ_kmRI6JkWNwErWWnQREmO0FLXcv/n/c4u04/b/livelabsfiles/o/labfiles/backup-and-recovery-operations-prerequisities.zip) file in `/opt/oracle/product/21c/dbhome_1/bin` location.
 
 2. Extract the contents from the zip file using the following command.
     ```
@@ -58,8 +59,9 @@ In this task, you download and execute the SQL script file using the following s
 
 3. Open the backup-and-recovery-operations-prerequisities.sql script file, update the following details, and save.
     * password - Provide your password.
-    * host name - Provide the host name of the machine where the database is installed.
+    * hostname - Provide the host name of the machine where the database is installed.
     * port - Provide the port name. Usually port number is 1521.
+    * pdbname - Provide the name of the pdb you want to connect to.
 
 4. Start the SQL\*Plus prompt and connect as the sysdba user.
     ```
@@ -91,4 +93,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author**: Suresh Mohan, Database User Assistance Development Team
 - **Contributors**: Suresh Rajan, Manish Garodia
-- **Last Updated By & Date**: Suresh Mohan, May 2022
+- **Last Updated By & Date**: Suresh Mohan, June 2022

@@ -10,11 +10,11 @@ Once you're using Oracle Database to store your document collections, you have a
 
 In the workshop, you will create an Autonomous JSON Database, and connect to it using MongoDB tools. You'll learn how you can work with JSON data using both standard MongoDB tools, and using Oracle Database tools.
 
-This lab is organized into different topics, each topic consists of multiple steps. Some steps are a bit more advanced, they're marked as 'advanced' and you can skip them. After completing this workshop a user has a very good understanding what JSON features are available in Oracle Database and when to use them. A user will also have learned why Oracle database is better suited for JSON Development than MongoDB, etc.
+This lab is organized into different topics, each topic consists of multiple steps. Some steps are a bit more advanced, they're marked as 'advanced' and you can skip them. After completing this workshop a user has a very good understanding of what JSON features are available in Oracle Database and when to use them. A user will also have learned why Oracle database is better suited for JSON Development than MongoDB, etc.
 
 ### Workshop Scenario
 
-In this workshop we'll implement a very simple employee database. 
+In this workshop, we'll implement a very simple employee database. 
 
 We'll create an Autonomous JSON Database, and connect to it using the standard "MongoDB Shell" tool. We'll use that to create an employee collection, and populate it with some employee records.
 
@@ -62,7 +62,7 @@ JSON is a human-readable, self-describing format to represent data in a hierarch
 }
 ```
 
-Objects consist of key-value pairs: the key "id" has the value 100. Keys are always strings (identified by double quotes). Scalar values can be numeric (like 100), strings ("John"), Boolean (true, false) or null. The ordering of key-values pairs in an object is not relevant but keys have to be unique per object. Keys can also point to a non-scalar value, namely another object (like address) or array (phoneNumbers). A JSON array is an ordered list of value. You can think of objects and arrays both being containers with values; in an object the key identifies the value whereas in an array it is the position that identifies the value.
+Objects consist of key-value pairs: the key "id" has the value 100. Keys are always strings (identified by double quotes). Scalar values can be numeric (like 100), strings ("John"), Boolean (true, false) or null. The ordering of key-value pairs in an object is not relevant but keys have to be unique per object. Keys can also point to a non-scalar value, namely another object (like address) or array (phoneNumbers). A JSON array is an ordered list of value. You can think of objects and arrays both being containers with values; in an object the key identifies the value whereas in an array it is the position that identifies the value.
 
 No problem, if this does not make much sense yet, you'll get more comfortable with JSON very soon - it is really easy!
 
@@ -72,7 +72,7 @@ One thing to keep in mind is that JSON needs no upfront definition of keys or da
 
 Schema-flexibility is a big reason why JSON makes a lot of sense for application development. Especially in the initial phase an application is quite dynamic, new fields are needed, interfaces get changed, etc. Maintaining a relational schema is hard if application changes often need a change in the underlying tables and existing data needs to be modified to fit into the new schema. JSON makes this much easier as new documents may look different than old one (for example have additional fields).
 
-JSON also avoids normalization of a business object into multiple tables. Look at the example above with a customer having multiple phone numbers. How would we store the phone numbers relationally? In separate columns (thus limiting the total amount of phone numbers per person) or in a separate table so that we need to join multiple tables if we want to retrieve on business object? In reality most business objects get normalized into many more than two tables to that an application developer has to deal with the complexity into inserting into many tables when adding a new object and joining the tables back on queries - the SQL to do that can get quite complex. JSON on the other hand allows to map an entire business object into one JSON document. Every insert or query now only affects one value in the database - no joins.
+JSON also avoids normalization of a business object into multiple tables. Look at the example above with a customer having multiple phone numbers. How would we store the phone numbers relationally? In separate columns (thus limiting the total amount of phone numbers per person) or in a separate table so that we need to join multiple tables if we want to retrieve on business object? In reality, most business objects get normalized into many more than two tables so that an application developer has to deal with the complexity of inserting into many tables when adding a new object and joining the tables back on queries - the SQL to do that can get quite complex. JSON on the other hand allows one to map an entire business object into one JSON document. Every insert or query now only affects one value in the database - no joins are needed.
 
 Now you know what JSON is and also why so many people love it. Enough theory for now - time to code!
 

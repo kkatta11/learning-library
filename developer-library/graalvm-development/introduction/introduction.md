@@ -53,5 +53,5 @@ GraalVMはJavaアプリケーションに対して二つの稼働方法を提供
 
 ## Acknowledgements
 * **Author** - Jun Suzuki, Java Value Solutions Consultant, Java GBU
-* **Contributors** -  <Name, Group> -- optional
-* **Last Updated By/Date** - Jun Suzuki, Java Value Solutions Consultant, March, 2022
+* **Contributors** - James Connors, Madhusudhan Rao, David Start
+* **Last Updated By/Date** - Jun Suzuki, May 2022

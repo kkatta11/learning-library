@@ -66,7 +66,16 @@ In this task, you configure the fast recovery area using the following steps.
     System altered.
     ```
 
-4. Use the following command again to view the altered settings. You can see that the **`db_recovery_file_dest_size`** parameter is set to _`10GB`.
+4. If the `db_recovery_file_dest` parameter is not already set, use the following command to set the recovery file destination location. In this case, it is set to `/opt/oracle/recovery_area`.
+    ```
+    SQL> <copy>alter system set db_recovery_file_dest="/opt/oracle/recovery_area";</copy>
+    ```
+    Output:
+    ```
+    System altered.
+    ```
+
+5. Use the following command again to view the altered settings. You can see that the `db_recovery_file_dest_size` parameter is set to _`10GB` and `db_recovery_file_dest` parameter is set.
     ```
     SQL> <copy>show parameter recovery;</copy>
     ```
@@ -311,4 +320,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author**: Suresh Mohan, Database User Assistance Development Team
 - **Contributors**: Suresh Rajan, Manish Garodia, Subhash Chandra, Ramya P
-- **Last Updated By & Date**: Suresh Mohan, May 2022
+- **Last Updated By & Date**: Suresh Mohan, June 2022

@@ -3,7 +3,7 @@
 ## Introduction
 This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance running the Oracle GoldenGate Veridata Marketplace image and a Virtual Cloud Network (VCN).
 
-*Estimated Lab Time:* 15 minutes
+*Estimated Time:* 15 minutes
 
 ### Objectives
 -   Download ORM stack
@@ -22,6 +22,10 @@ This lab assumes you have:
 </if>
 <if type="advanced">
     - [ggvd-mkplc-advanced.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/JHclbM43HVmaX_i7ZAo3m5qQGet_fIKOLQlMyoQW-SRIhrx141BzEQ_Z5I9yOwxz/n/natdsecurity/b/stack/o/ggvd-mkplc-advanced.zip)
+</if>
+
+<if type="tools">
+    - [ggvd-mkplc-tools.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LrY-ZJ7TOd_A5j7k85TN73MRwC9En1FJtqm7rKVTKQCIv-zy6h8qqOLUMRe-zuVx/n/natdsecurity/b/stack/o/ggvd-mkplc-tools.zip)
 </if>
 
 2.  Save in your downloads folder.
@@ -55,6 +59,6 @@ Using the details from the two steps above, proceed to the lab *Environment Setu
 -  Create Stack:  *Compute only* with an existing VCN where security lists have been updated as per *Step 2* above
 
 ## Acknowledgements
-* **Author** - Anuradha Chepuri, Principal UA Developer, Oracle GoldenGate User Assistance
-* **Contributors** -  Nisharahmed Soneji, Sukin Varghese, Rene Fontcha
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, June 2021
+* **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology
+* **Contributors** -  Anuradha Chepuri, Nisharahmed Soneji, Sukin Varghese
+* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, May 2022

@@ -1,4 +1,4 @@
-# 演習1. OCIリソースのプロビジョニング
+# 事前準備
 
 ## 概要
 
@@ -14,7 +14,7 @@
 
 ### ■前提条件
 
-* 事前に有効なOCIアカウントを取得すること
+* 有効なOCIアカウントをお持ちであること
 
 ## Task 1: コンパートメントを作成する
 
@@ -45,15 +45,6 @@
 
 1.  OCIコンソール上、左上にあるナビゲーションメニューをクリックし、**Compute** → **instance** をクリックします。
   ![image of instance creation](images/create-instance.png)
-    &nbsp;
-
-  Use tables sparingly:
-
-  | Column 1 | Column 2 | Column 3 |
-  | --- | --- | --- |
-  | 1 | Some text or a link | More text  |
-  | 2 |Some text or a link | More text |
-  | 3 | Some text or a link | More text |
 
 2. インスタンス作成画面にて、**GraalvM_Compartment**を選択した状態で、**Create instance**ボタンをクリックします。 
 ![Image of instance creation](images/create-instance1.png)
@@ -82,5 +73,5 @@
 ## Acknowledgements
 
 - **Created By/Date** - Jun Suzuki, Java Global Business Unit, April 2022
-- **Contributors** - 
-- **Last Updated By/Date** - Jun Suzuki, April 2022
+- **Contributors** - James Connors, Madhusudhan Rao, David Start 
+- **Last Updated By/Date** - Jun Suzuki, May 2022

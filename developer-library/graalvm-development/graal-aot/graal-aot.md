@@ -18,7 +18,7 @@ Graalコンパイラには、進化したJITコンパイラ機能に並び、ネ
 
 ### ■前提条件
 
-* 演習１「GraalVM Enterprise Editionのインストール」を実施済みであること
+* 演習１「GraalVMのインストール」を実施済みであること
 
 ## Task 1: サンプルアプリケーションの導入
 
@@ -27,6 +27,10 @@ Graalコンパイラには、進化したJITコンパイラ機能に並び、ネ
 1. 演習１の中でGitHubよりダウンロードしたGraalVM Demosサンプルアプリケーションを利用します。  
 サンプルソースをダウンロードしたフォルダー配下の"native-list-dir"フォルダーに移動してください。
 
+    ```
+    <copy>cd ~</copy>
+    ```
+    
     ```
     <copy>cd graalvm-demos</copy>
     ```
@@ -39,7 +43,7 @@ Graalコンパイラには、進化したJITコンパイラ機能に並び、ネ
 
    エディターでサンプルソースコードの内容を確認します。
     ```
-    <copy>nano /graalvm-demos/native-list-dir/ListDir.java</copy>
+    <copy>nano ListDir.java</copy>
     ```  
        
     ```
@@ -70,22 +74,22 @@ Graalコンパイラには、進化したJITコンパイラ機能に並び、ネ
     }
     ```
 
+    CTRL+Xを押下し、nanoエディターからExitします。
+
 ## Task 2: サンプルアプリケーションのビルドおよび実行
 
 1. ソースコードをビルドします。
 
-    ```
-    <copy>cd native-list-dir</copy>
-    ```
-    ListDir.javaをコンパイルします。  
+    ```native-list-dir```配下で以下のコマンドを実行してください。  
 
     ```
     <copy>javac ListDir.java</copy>
     ```
+
     生成されたJavaクラス"ListDir.class"に対してnative imageの生成を実施します。
 
     ```
-    <copy>native-image ListDir</copy>
+    <copy>native-image --no-fallback ListDir</copy>
     ```
 
 2. JITモードでJavaクラスを実行し、その実行時間を計測します。javaコマンドの引数に任意のディレクトリーのパスを渡します。例えば、ログインユーザーのホームディレクトリー配下のファイルを集計する場合、以下のコマンドを実行します。
@@ -97,17 +101,183 @@ Graalコンパイラには、進化したJITコンパイラ機能に並び、ネ
     ```
     <copy>time ./listdir ~/.</copy>
     ```
+       
+    
+    任意のディレクトリーのパスをいろいろを変更して、二つのモードでの実行結果を比較してみてください。
 
+<!--
 4. 二つのモードで順番に実行するシェルで両者のパフォーマンスを比較します。  
 
     ```
     <copy>./run.sh ~/.</copy>
     ```
     ![Image of run.sh](images/graal-run.png)
+-->
 
+## Task 3（オプショナル）: native imageにおけるJavaリフレクションの使用
 
+native imageは実行する前にビルドされ、そのビルドはアクセス可能なコードの静的分析に依存します。従って動的にロードされるクラスやオブジェクトを含むアプリケーションをnative imageとして実行する場合エラーが発生する場合があります。以下のJava機能をnative imageで利用場合、GraalVMのトレース・エージェントを使用した構成支援ツールを利用する必要があります：
+* Javaリフレクション
+* JNI(Java Native Interface )
+* 動的プロキシ・オブジェクト(java.lang.reflect.Proxy)
+* クラスパス・リソース(Class.getResource)
+以下のJavaリフレクションサンプルをnative imageとして実行するため、GraalVMのトレース・エージェント機能を利用します。
+
+1. Javaリフレクションを使用したプログラム「ReflectionExmpple.java」を作成します。
+    このサンプルの中でJavaリフレクションAPIを使用します。実行時にクラス名とメソッド名を引数として渡し、実行したいクラスとメソッドを動的に指定します。指定に応じて文字列の反転、あるいは大文字へ変換などの操作を行います。
+
+    ```
+    <copy>cd ~</copy>
+    ```
+
+    エディタを開き「ReflectionExample.java」のソースファイルを作成します。
+    ```
+    <copy>nano ReflectionExample.java</copy>
+    ```
+    以下のソースコードを貼り付けます。
+
+    ```
+    <copy>
+    import java.lang.reflect.Method;
+
+    class StringReverser {
+        static String reverse(String input) {
+            return new StringBuilder(input).reverse().toString();
+        }
+    }
+
+    class StringCapitalizer {
+        static String capitalize(String input) {
+            return input.toUpperCase();
+        }
+    }
+
+    public class ReflectionExample {
+        public static void main(String[] args) throws ReflectiveOperationException {
+            String className = args[0];
+            String methodName = args[1];
+            String input = args[2];
+            Class<?> clazz = Class.forName(className);
+            Method method = clazz.getDeclaredMethod(methodName, String.class);
+            Object result = method.invoke(null, input);
+            System.out.println(result);
+        }
+    }
+    </copy>
+    ```
+    
+    Ctrl＋Xを押し、内容保存の確認メッセージに対し、"Y"を入力し、Enterを押下してソースファイルを保存します。 
+
+2. 「ReflectionExmpple.java」をコンパイルし、実行します。結果が正常に表示されていることを確認します。
+
+    ```
+    <copy>javac ReflectionExample.java</copy>
+    ```
+    ```
+    <copy>java ReflectionExample StringReverser reverse "hello world"</copy>
+    ```
+    ```
+    <copy>java ReflectionExample StringCapitalizer capitalize "hello world"</copy>
+    ```
+
+3. 「ReflectionExample.class」をnative imageに変換後再度実行します。
+
+    ```
+    <copy>native-image --no-fallback ReflectionExample</copy>
+    ```
+    ```
+    <copy>./reflectionexample StringReverser reverse "hello"</copy>
+    ```
+    native imageを実行した結果、下記のエラーが表示されます。
+    ```
+    $ ./reflectionexample StringReverser reverse "hello"
+    Exception in thread "main" java.lang.ClassNotFoundException: StringReverser
+        at java.lang.Class.forName(DynamicHub.java:1370)
+        at java.lang.Class.forName(DynamicHub.java:1345)
+        at ReflectionExample.main(ReflectionExample.java:20)
+    ```
+    「StringReverser」クラスは実行時動的に指定されたため、native imageをビルド時の静的に分析では該当クラスを含むことはできませんした。
+    この問題を解決するため、GraalVMが提供する、通常のJava VMでの実行のすべての動的使用状況を追跡するエージェント機能を利用します。
+
+4. 以下のコマンドでトレース構成ファイルの格納場所を用意します。
+
+    ```
+    <copy>mkdir -p META-INF/native-image</copy>
+    ```
+    
+    アプリケーション実行時にnative imageエージェント機能を有効にし、構成ファイルの出力場所を指定してアプリケーションを実行します。
+    ```
+    <copy>
+    java -agentlib:native-image-agent=config-output-dir=META-INF/native-image ReflectionExample StringReverser reverse "hello world"
+    </copy>
+    ```
+    
+    生成されるファイルは、実行時インターセプトされたすべての動的アクセスを含むJSON形式のスタンドアロン構成ファイルです。 
+
+    ```
+    <copy>cat META-INF/native-image/reflect-config.json</copy>
+    ```
+    ```
+    $ cat META-INF/native-image/reflect-config.json
+    [opc@instance-20220522-1556 ~]$ cat META-INF/native-image/reflect-config.json
+    [
+    {
+        "name":"StringReverser",
+        "methods":[{"name":"reverse","parameterTypes":["java.lang.String"] }]}
+
+    ]
+    ```
+
+    エージェントを複数回を呼び出し、すべての実行時クラスと呼び出しメソッドを構成します。複数の構成を１つのファイルにまとめるため、javaコマンド実行時「config-merge-dir」オプションを指定します。
+    ```
+    <copy>
+    java -agentlib:native-image-agent=config-merge-dir=META-INF/native-image ReflectionExample StringCapitalizer capitalize "hello world"
+    </copy>
+    ```
+    ```
+    <copy>cat META-INF/native-image/reflect-config.json</copy>
+    ```
+    ```
+    $ cat META-INF/native-image/reflect-config.json
+    [
+    {
+    "name":"StringCapitalizer",
+    "methods":[{"name":"capitalize","parameterTypes":["java.lang.String"] }]}
+    ,
+    {
+    "name":"StringReverser",
+    "methods":[{"name":"reverse","parameterTypes":["java.lang.String"] }]}
+
+    ]
+    ```
+
+5. エージェントによる構成ファイルを作成後、再度native imageをビルドし、実行します。今度はnative imageをビルドする際、JSON形式の構成ファイルが参照され、リフレクションの実行時クラスとメソッドが解決されます。
+
+    ```
+    <copy>native-image --no-fallback ReflectionExample</copy>
+    ```
+    
+    ```
+    <copy>./reflectionexample StringReverser reverse "hello world"</copy>
+    ```
+    ```
+    <copy>./reflectionexample StringCapitalizer capitalize "hello world"</copy>
+    ```
+
+    今度はnative imageが正常に実行されることを確認できます。
+    ```
+    $ [opc@instance-20220522-1556 ~]$ ./reflectionexample StringReverser reverse "hello world"
+    dlrow olleh
+    [opc@instance-20220522-1556 ~]$ ./reflectionexample StringCapitalizer capitalize "hello world"
+    HELLO WORLD
+    ```
+
+## Learn More
+
+*参考リンク*
+* [トレース・エージェントを使用した構成支援](https://docs.oracle.com/cd/F44923_01/enterprise/21/docs/reference-manual/native-image/Agent/)
 ## Acknowledgements
 
 - **Created By/Date** - Jun Suzuki, Java Global Business Unit, April 2022
-- **Contributors** - 
-- **Last Updated By/Date** - Jun Suzuki, April 2022
+- **Contributors** - James Connors, Madhusudhan Rao, David Start 
+- **Last Updated By/Date** - Jun Suzuki, May 2022

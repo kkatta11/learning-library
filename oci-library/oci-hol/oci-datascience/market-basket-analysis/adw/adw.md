@@ -27,7 +27,7 @@ This guide shows how to provision an Oracle Autonomous Data Warehouse
     You will proivision the database manually in the OCI Service Console. Once you are logged into your tenancy, select the hamburger icon in the top left corner. 
     Then select Oracle Database from the menu on the left hand side, followed by Autonomous Data Warehouse.
 
-    ![Choose ADW](./images/awd-console)
+    ![Choose ADW](./images/adwconsole.png)
 
 2. Create Autonomous Database
 
@@ -40,12 +40,12 @@ This guide shows how to provision an Oracle Autonomous Data Warehouse
     Database Version - 19c
     OCPU count - 1
     Storage (TB) - 1
-    Password - We will set the admin password to 'Welcome12345'. Feel free to change it as desired, but make sure to save this password as you will need it later.
+    Password - We will set the admin password to <Welcome12345>. Feel free to change it as desired, but make sure to save this password as you will need it later.
     Access Type - Allow secure access from everywhere
     Choose a license type - License Included
 
-    ![Create ADW](./images/create1.png)
-    ![Create ADW](./images/create2.png)
+    ![Create ADW](./images/create-adw.png)
+    ![Create ADW](./images/create-adw-admin.png)
 
     Once you've configured your Autnonomous Database, select the blue "Create Autonomous Database" button at the bottom of the page. 
 

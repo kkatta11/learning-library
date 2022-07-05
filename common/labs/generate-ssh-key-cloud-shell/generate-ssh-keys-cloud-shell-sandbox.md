@@ -8,13 +8,25 @@ We recommend you use the *Oracle Cloud Shell* to interface with the OCI compute 
 
 *IMPORTANT:  If the SSH key is not created correctly, you will not be able to connect to your environment and will get errors.  Please ensure you create your key properly.*
 
-## Oracle Cloud Shell
+Estimated Time: 5 minutes
+
+### Objectives
+In this lab, you will:
+- Generate SSH keys using Oracle cloud shell
+- List content of the public key
+
+### Prerequisites
+* An Oracle Cloud Account - please view this workshop's LiveLabs landing page to see which environments are supported.
+
+### Oracle Cloud Shell
 
 The Cloud Shell machine is a small virtual machine running a Bash shell which you access through the OCI Console (Homepage). Cloud Shell comes with a pre-authenticated OCI CLI (Command Line Interface), set to the Console tenancy home page region, as well as up-to-date tools and utilities. To use the Cloud Shell machine, your tenancy administrator must grant the required IAM (Identity and Access Management) policy.
 
+## Task 1: Generate SSH Keys
+
 1.  To start the Oracle Cloud shell, go to your Cloud console and click the cloud shell icon at the top right of the page.
 
-    ![Open cloud shell](./images/cloudshellopen.png " ")
+    ![Cloud shell open.](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/cloud-shell.png " ")
 
     ![Set up cloud shell](./images/cloudshellsetup.png " ")
 
@@ -48,20 +60,21 @@ The Cloud Shell machine is a small virtual machine running a Bash shell which yo
 
     ![Examine files](./images/examine-cloudshell-keys.png " ")
 
-    Note in the output that there are two files, a *private key:* ```<<sshkeyname>>``` and a *public key:* ```<<sshkeyname>>.pub```. Keep the private key safe and don't share its content with anyone. The public key will be needed for various activities and can be uploaded to certain systems as well as copied and pasted to facilitate secure communications in the cloud.
+    >**Note:** In the output, there are two files, a *private key:* `cloudshellkey` and a *public key:* `cloudshellkey.pub`. Keep the private key safe and don't share its content with anyone. The public key will be needed for various activities and can be uploaded to certain systems as well as copied and pasted to facilitate secure communications in the cloud.
 
 4. To list the contents of the public key, use the cat command ```cat <<sshkeyname>>.pub```
 
     >**Note:** The angle brackets <<>> should not appear in your code.
 
-    ![Cat in cloud shell](images/cat-in-cloudshell.png " ")
+    ![Cat in cloud shell](./images/cat-in-cloudshell.png " ")
 
 5.  When pasting the key into the compute instance in future labs, make sure that you remove any hard returns that may have been added when copying. *The .pub key should be one line.*
 
-    ![Copy public key](images/copy-publickey-cloudshell.png " ")
+    ![Copy public key](./images/copy-publickey-cloudshell.png " ")
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Dan Kingsley, Enablement Specialist, OSPA
+* **Contributors** - Arabella Yao, Database Product Management
 * **Last Updated By/Date** - Arabella Yao, May 2022

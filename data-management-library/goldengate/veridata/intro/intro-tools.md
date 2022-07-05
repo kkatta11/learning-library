@@ -4,10 +4,12 @@
 
 The labs in this workshop walk you through use cases to add and remove column mapping, purge data, and delete directories.
 
-*Estimated Lab Time*: 4 hours
+*Estimated Workshop Time*: 4 hours
 
 ### About Oracle GoldenGate Veridata
-Oracle GoldenGate Veridata compares a source (original, or trusted) set of data with a target (secondary) set of data to identify discrepancies. By accounting for data that is being replicated while a comparison takes place, Oracle GoldenGate Veridata can run concurrently with data transactions and replication, while still producing an accurate comparison report. You can use Oracle GoldenGate Veridata to compare data sets that reside in identical or different types of databases; the workflow is essentially the same for all supported databases, with only very minor differences.
+Oracle GoldenGate Veridata compares a source (original or trusted) set of data with a target (secondary) set of data to identify discrepancies. By accounting for data that is being replicated while a comparison takes place, Oracle GoldenGate Veridata can run concurrently with data transactions and replication while still producing an accurate comparison report.
+
+You can use Oracle GoldenGate Veridata to compare data sets that reside in identical or different databases; the workflow is essentially the same for all supported databases, with only very minor differences.
 
 ### Video Preview
 Watch this short video about the Oracle GoldenGate product family:
@@ -28,7 +30,7 @@ In this Workshop, you will:
     * Prior knowledge of using Linux command-line options and Oracle WebLogic Server
     * Prior knowledge of Database basic concepts
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Learn More
 
@@ -41,5 +43,5 @@ Use these links to get more information about Oracle GoldenGate Veridata:
 
 ## Acknowledgements
 * **Author** - Anuradha Chepuri, Principal UA Developer, Oracle GoldenGate User Assistance
-* **Contributors** -  Sukin Varghese, Jonathan Fu
+* **Contributors** -  Sukin Varghese, Jonathan Fu, Madhusudhan Rao
 * **Last Updated By/Date** - Anuradha Chepuri, May 2022

@@ -11,7 +11,7 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-* Start up Cloud Shell
+* Startup Cloud Shell
 * Download __mongosh__ to Cloud Shell
 * Attach __mongosh__ to your Autonomous JSON Database
 * Create a collection
@@ -52,7 +52,7 @@ Cloud Shell is a Linux command prompt provided for your user. You can upload fil
 
 	![wget mongosh](./images/wget-mongosh.png)
 
-3. This willl download a compressed tar file which you will need to unzip. Do that with "tar xvf " followed by the name of the downloaded file. In my case, this would be "tar xvf mongosh-1.2.3-linux-x64.tgz" but it may change with newer versions.
+3. This will download a compressed tar file which you will need to unzip. Do that with "tar xvf " followed by the name of the downloaded file. In my case, this would be "tar xvf mongosh-1.2.3-linux-x64.tgz" but it may change with newer versions.
 
 	![unzip the tar file](./images/unzip.png)
 
@@ -61,7 +61,7 @@ Cloud Shell is a Linux command prompt provided for your user. You can upload fil
 	The PATH variable must include the 'bin' directory, which you can see in the output from the unzip command.
 
     You can set the PATH variable manually, or use the following shell magic to set it up automatically, and add it to the .bashrc startup file
-    for next time you log in to the Cloud Shell. Make sure to cut and paste this carefully, do not try to retype it, as a mistake here may damage your 
+    for the next time you log in to the Cloud Shell. Make sure to cut and paste this carefully, do not try to retype it, as a mistake here may damage your 
     .bashrc file:
 
     ```
@@ -89,7 +89,7 @@ Cloud Shell is a Linux command prompt provided for your user. You can upload fil
 
 	Make sure you've changed both strings, and have not left any square brackets in there.
 
-	**IMPORTANT NOTE:** if your password contains any special characters in the set / : ? # [ ] @, you will need to escape them as follows:
+	**IMPORTANT NOTE:** If your password contains any special characters in the set / : ? # [ ] @, you will need to escape them as follows:
 
 	| Character | Escape Sequence |
 	| :---:     | :---: |
@@ -118,7 +118,7 @@ Cloud Shell is a Linux command prompt provided for your user. You can upload fil
 
 ## Task 5: Create, populate and search a collection
 
-You should now be in Mongo Shell. This is a command-line utility to interact with MongoDB databases (and, by extension, any other database which implements the MongoDB API). Other tools are available such as the graphical Compass tool, but we will stick with the command line to avoid complexities of installing a GUI-based tool.
+You should now be in Mongo Shell. This is a command-line utility to interact with MongoDB databases (and, by extension, any other database which implements the MongoDB API). Other tools are available such as the graphical Compass tool, but we will stick with the command line to avoid the complexities of installing a GUI-based tool.
 
 1.  Create a collection.
 
@@ -145,7 +145,7 @@ You should now be in Mongo Shell. This is a command-line utility to interact wit
 	</copy>
 	```
 
-	That created a single employee record documemt. Now we'll create another two. Notice that the second one has an email address, which the first doesn't. With JSON we can change the schema at will.
+	That created a single employee record document. Now we'll create another two. Notice that the second one has an email address, which the first doesn't. With JSON we can change the schema at will.
 
 	```
 	<copy>
@@ -203,7 +203,7 @@ You should now be in Mongo Shell. This is a command-line utility to interact wit
 
 5.	Updates
 
-	We can use the updateOne or updateMany commands to make changes to one, or a number, of documents. They both take a first argument which is a QBE specifying which documents to update, and a second argument which is the changes to be made to the document. For example the following will add an email address to our "Miller" employer.
+	We can use the updateOne or updateMany commands to make changes to one, or a number, of documents. They both take a first argument which is a QBE specifying which documents to update, and a second argument which is the changes to be made to the document. For example, the following will add an email address to our "Miller" employer.
 
 	```
 	<copy>
@@ -224,7 +224,7 @@ You should now be in Mongo Shell. This is a command-line utility to interact wit
 That's all we're going to cover in MongoDB Shell, but there are some important points to remember:
 
 * This will work just as well with GUI tools such as Atlas, or from your own programs using MongoDB libraries
-* All the data is held in Oracle Autonomous Database, and can be accessed from any SQL-based programs just as easily as from MongoDB programs.
+* All the data is held in Oracle Autonomous Database, and can be accessed from any SQL-based program just as easily as from MongoDB programs.
 
 In the next lab we'll cover Autonomous Database tools, including JSON Workshop and SQL.
 

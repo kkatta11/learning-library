@@ -33,11 +33,11 @@ This lab assumes you have:
 
   > **Note:** If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
-The following files <if type="external">referenced in [Lab: Initialize Environment](?lab=init-start-oas) should already be downloaded and staged as instructed, as they</if> <if type="desktop"> staged under *`/opt/oracle/stage`*</if> are required to complete this lab.
+The following files <if type="external">referenced in [Lab: Initialize Environment](?lab=initialize-environment) should already be downloaded and staged as instructed, as they</if> <if type="desktop"> staged under *`/opt/oracle/stage`*</if> are required to complete this lab.
 
-Navigate to the documents directory on the left side of the dialogue box and open **Retail Live Labs Content** directory to find the files needed for the lab. The first file, **Bobby's Burgers & Fries.dva** will be used in the next step and the **bobbysburgerdataset.csv** and **bobbyscustomerdataset.csv** files will be referenced later in lab 7. Make sure to download the resources now to use as the lab progresses!
+Navigate to the documents directory on the left side of the dialogue box and open **Retail Live Labs Content** directory to find the files needed for the lab. The first file, **Bobby's Burgers & Fries.dva** will be used in the next step and the **bobbysburgerdataset.csv** and **bobbyscustomerdataset.csv** files will be referenced later in lab 7.
 
-## **Task 1:** Data exploration
+## Task 1: Data exploration
 1. From the browser session you started in the  Initialize environment lab, **click** on the **Page Menu** icon located in the upper right-hand corner.
     ![Page menu icon](./images/intro.png " ")
 
@@ -58,10 +58,10 @@ Oracle Analytics Server includes its own light weight data preparation capabilit
 8. Once satisfied with the above step, proceed back to the **Visualize** tab at the top of the screen. **Click** Visualize.
 
 
-## **Task 2:** Discover insights
+## Task 2: Discover insights
 The data visualization capabilities in Oracle Analytics Server are extensive, include things like mapping and custom calculations. In this exercise we will use both capabilities: we will create custom calculations based on two available metrics, and we will then display the results on a map.
 
-1. In this first exercise we will create our first visual. Lets view sales by location. Using the visualizations menu on the left side of the pane:
+1. In this first exercise we will create our first visual. Let's view sales by location. Using the visualizations menu on the left side of the pane:
     - **Control select** and choose **'State'** and **'Sales'** in the **"region1"** dataset.
     - **Right click**, select **'Pick Visualization'**.
 
@@ -125,7 +125,12 @@ The data visualization capabilities in Oracle Analytics Server are extensive, in
 
 13. Now we will **create a new metric** called **"Previous Year - Salary & Wage"**. Notice there are a wide range of functions available for creating custom calculations using the expression builder. **We are going to use the code snippet below**, click the copy button and paste it into the calculation box on OAS. Feel free explore the expression builder and create more calculations.
 
-        <copy>(FILTER(XSA('weblogic'.'Financial (1)')."Columns"."Previous Year - Operating Expenses" USING XSA('weblogic'.'Financial (1)')."Columns"."Account Group"='Salary & Wage'))</copy>
+    ```
+    <copy>
+    (FILTER(XSA('biworkshopuser'.'Financial (1)')."Columns"."Previous Year - Operating Expenses" USING XSA('biworkshopuser'.'Financial (1)')."Columns"."Account Group"='Salary & Wage'))
+    </copy>
+
+    ```
 
     ![custom calculation](./images/custom-calculation.png " ")
     >**Note:** The arguments in our calculation appear as full path names but are shortened when added into the calculation box of OAS. If confused use the picture below to make sure your custom calculation matches.

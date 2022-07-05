@@ -3,9 +3,9 @@
 ## Introduction
 This lab describes how to create and execute Jobs.
 
-You must create and execute the job to run the comparisons. The job configuration determines which compare pair groups are processed.
+You must create and execute a job to run the comparisons. The job configuration determines which compare pair groups are processed.
 
-*Estimated Lab Time*: 30 minutes
+*Estimated Time*: 30 minutes
 
 ### Objectives
 In this lab, you will:
@@ -68,7 +68,7 @@ To execute a job:
 
     ![Finished Jobs](./images/completed-jobs-compare-pair-status-chart.png " ")
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Learn More
 * [Get Started with Oracle GoldenGate Veridata Workshop](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=833&clear=180&session=4555570607052)

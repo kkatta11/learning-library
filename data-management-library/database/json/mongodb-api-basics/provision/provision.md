@@ -19,7 +19,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Logged into your Oracle Cloud Account
+* Be logged into your Oracle Cloud Account
 
 ## Task 1: Choose AJD from the Services Menu
 
@@ -27,20 +27,20 @@ In this lab, you will:
 
 <if type="freetier">
 
-2. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **Region** in the top, right hand corner of the page.
+2. If you are using a Free Trial or Always Free account, and you want to use Always Free Resources, you need to be in a region where Always Free Resources are available. You can see your current default **Region** in the top, right-hand corner of the page.
 
     ![Select region on the far upper-right corner of the page.](./images/region.png " ")
 
 </if>
 <if type="livelabs">
 
-2. If you are using a LiveLabs account, you need to be in the region your account was provisioned in. You can see your current default **Region** in the top, right hand corner of the page. Make sure that it matches the region on the LiveLabs Launch page.
+2. If you are using a LiveLabs account, you need to be in the region your account was provisioned in. You can see your current default **Region** in the top, right-hand corner of the page. Make sure that it matches the region on the LiveLabs Launch page.
 
     ![Select region on the far upper-right corner of the page.](./images/region.png " ")
 
 </if>
 
-3. Click the navigation menu in the upper left to show top level navigation choices.
+3. Click the navigation menu in the upper left to show top-level navigation choices.
 
     ![Oracle home page.](./images/navigation.png " ")
 
@@ -140,7 +140,7 @@ In this lab, you will:
 
     In order to use the Database API for MongoDB, you must set the database up with an access control rule. So choose __Secure access from allowed IPs and VCNs only__.
 
-    We will then set a CIDR block to allow access from any IP address. This should *never* be done for a production database, but makes it simpler for our databas to be accessed from Cloud Shell in the next lab.
+    We will then set a CIDR block to allow access from any IP address. This should *never* be done for a production database, but makes it simpler for our database to be accessed from Cloud Shell in the next lab.
 
     ![network access](./images/network-access.png " ")
 

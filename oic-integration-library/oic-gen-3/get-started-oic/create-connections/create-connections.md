@@ -23,12 +23,12 @@ This lab assumes you have:
 ## Task 1: Create an Oracle Autonomous Data Warehouse Connection
 Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 
-1. From the *Connections* window, click **Create**.
+1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
 
 2. In the *Create Connection - Select Adapter* dialog, select the **Oracle ADW** adapter to use for this connection. To find the adapter, enter `adw` in the search field. Click on the highlighted adapter and hit **Select**.
     ![Create ADW connection](images/create-adw-connection.png)
 
-3. In the *Create Connection* dialog, enter the following information:
+3. In the *Create Connection* dialog, enter the following information and click **Create**
 
     | **Field**        | **Value**          |       
     | --- | ----------- |
@@ -65,9 +65,9 @@ Create a connection with the Oracle Autonomous Data Warehouse Adapter.
 To access the File Server from an Integration, you will need to create an FTP Connection.  
 **Note**: You can use an existing connection if one has already been configured for your environment.
 
-1. Starting at the Oracle Integration *Home* page, select **Integrations**, then **Connections** from the left Navigation pane.
-2. Click **Create**, then select the **FTP** Adapter and click **Select**.
-3. From the *Create Connection* dialog, *Name* your connection **File Server** and leave the rest of the configurations as default. Click **Create**.  
+1. In the left Navigation pane, click **Design** > **Connections** > click **Create**
+2. select the **FTP** Adapter and click **Select**.
+3. From the *Create Connection* dialog, *Name* your connection as **File Server** and leave the rest of the configurations as default. Click **Create**.  
 **Note**: If you get an error that the identifier already exists, change the Connection Name and remember this name for use later in the workshop.
 4. Enter the following configurations in the *FTP Connection* with the information you previously gathered from the File Server Settings page.  
 | Field                   | Value                                                 |
@@ -92,4 +92,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
+* **Last Updated By/Date** - Kishore Katta, July 2022

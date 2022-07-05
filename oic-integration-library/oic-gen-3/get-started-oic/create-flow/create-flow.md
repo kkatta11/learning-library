@@ -49,9 +49,9 @@ Add FTP Invoke to integration canvas.
 
 1. Change the Layout to Horizontal from the Toolbar on the top. Hover over the outgoing arrow from the *Scheduled* activity and Click the **+** sign in the integration canvas.
 
-2. Select the configured FTP Adapter connection which is created in the previous lab. This invokes the Oracle ERP Cloud Endpoint Configuration Wizard.
+2. Select the configured FTP Adapter connection which is created in the previous lab. This invokes the FTP Adapter  Configuration Wizard.
 
-3. On the Basic Info page, for *What do you want to call your endpoint?* element, enter `downloadSalesOrders`. Leave the rest as defaults.
+3. On the Basic Info page, for *What do you want to call the endpoint?* element, enter `downloadSalesOrders`. Leave the rest as defaults.
 
 4. Click **Next**.
 
@@ -61,7 +61,7 @@ Add FTP Invoke to integration canvas.
     | --- | ----------- |
     | Select Operation        | **Download File**       |
     | Select a Transfer Mode  | **Binary** |
-    | Input Directory | **/home/users/<your username>/Output** |
+    | Input Directory | **/home/users/#####/Output** |
     | File Name | **sales_orders.csv** |
     | Download Directory | **/tmp/stage** |
 
@@ -89,7 +89,7 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | **Element**        | **Value**          |       
     | --- | ----------- |
     | What do you want to call your endpoint? | `insertSalesOrders`       |
-    | What operation do you want to perform? | **Perform Bulk Data Operation** |
+    | What operation do you want to perform? | **Perform Bulk Data Import Operation** |
 
 3. Click **Next**.
 
@@ -101,17 +101,17 @@ Add the Oracle Autonomous Data Warehouse Adapter invoke to the integration canva
     | Delete file from object store after operation completion | **Un Check** |
     | Select Schema | **ADMIN** |
     | Select Table | Select **V\_SALES\_ORDERS**|
-    | Table columns | Click **>>** to move all the fields to the *Selected* box|
+    | Table columns | Click on ![Move all](images/move-all.png) to move all the fields to the *Selected* box|
 
     **Note:** The selected order of the columns should be per the input sales_order.csv data
 
     ![Choose Table in AWD Wizard](images/adw-wizard-choose-table.png)
 
-5. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_Data format options*.
+5. Click on **Edit**, in the *Bulk load from Object storage to ATP table* page in the section *Review and specify the copy_data format options*.
 
     ![Edit Copy Format options](images/edit-copy-data-format-options-1.png)
 
-    In the *Copy_data API Format Options* page Provide the following values:
+    In the *copy_data format Options* page Provide the following values:
 
     | **Element**        | **Value**          |       
     | --- | ----------- |
@@ -136,7 +136,7 @@ Use the mapper to drag fields from the source structure (downloadSalesOrders Res
 
 When we added the ADW invoke to the integration, a map icon was automatically added.
 
-1. Hover your cursor over the *Map to insertSalesSalesOrders* **Mapper** icon, click once, then select **Edit**.
+1. Hover your cursor over the *Map insertSalesOrders* **Mapper** icon, click once, then select **Edit**.
    ![Edit ADW Mapper](images/mapper-edit-erp-adw.png)
 
 2. Use the mapper to drag element nodes in the source FTP Invoke Response structure to element nodes in the target Oracle ADW structure.
@@ -144,7 +144,7 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
     Expand the **Source** node:
 
     ```
-    downloadSalesOrders Response(FTP) > DownloadFileToICSResponse > Download Response > ICSFiles > ICSFile
+    downloadSalesOrders Response(FTP) > Download File To ICS Response > Download Response > ICSFiles > ICSFile
 
     ```
 
@@ -163,9 +163,10 @@ When we added the ADW invoke to the integration, a map icon was automatically ad
 
    ![Completed FTP to ADW Mapping](images/mapper-completed-ftp-adw.png)
 
-3. Click **Validate**, then wait for the confirmation message *Mapping is valid and ready to use.*
+3. Click **Validate**, then wait for the confirmation message *Map to insertSalesOrders successfully validated.*
 
-4. Click **Close**
+4. Click **Go Back**
+    ![GoBack](images/mapper-goback-ftp-adw.png)
 
 5. Click **Save** to persist changes.
 
@@ -176,16 +177,17 @@ Manage business identifiers that enable you to track fields in messages during r
 > **Note:** If you have not yet configured at least one business identifier **Tracking Field** in your integration, then an error icon is displayed in the design canvas.
     ![Error Icon in Design Canvas](images/error-icon.png)
 
-1. Click the **Actions** menu on the top right, then select **Tracking**.
+1. Click the **Business Identifiers icon** on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
 2. From the *Source* section, expand **schedule**. Drag the **startTime** field from source to the *Drag a trigger field here* section:
 
     ![Assign Business Identifiers](images/add-business-identifiers.png)
 
-3. Click **Save**.
+3. Click **Business Identifiers icon** to save your changes.
 
-4. On the Integration canvas, click **Save**, followed by **Close**.
+4. On the Integration canvas, click **>(Go Back) button** to go back to the list of integrations page.
+  ![GoBack](images/integration-goback-ftp-adw.png)
 
 ## Task 6: Activate the integration
 
@@ -211,4 +213,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
+* **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Kishore Katta, May 2022

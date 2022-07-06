@@ -180,7 +180,7 @@ Manage business identifiers that enable you to track fields in messages during r
 1. Click the **Business Identifiers icon** on the top right.
     ![Open Business Identifiers For Tracking](images/open-business-identifiers.png)
 
-2. From the *Source* section, expand **schedule**. Drag the **startTime** field from source to the *Drag a trigger field here* section:
+2. From the *Source* section, expand **schedule**. Drag the **startTime** field from source and drop into the *Business Identifier Field* section:
 
     ![Assign Business Identifiers](images/add-business-identifiers.png)
 

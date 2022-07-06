@@ -44,7 +44,7 @@ If you just created a new Cloud account following the instructions in Getting St
 | Field &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- |
 | Display Name |Enter the display name for the instance. Note that the display name becomes part of the URL for accessing the instance.|
-| Version|Lists Version available in this tenancy. Select OCI Application Integration for Gen3 instance.
+| Version|Lists Version available in this tenancy. Select "OCI Application Integration" for Gen3 instance.
 | License Type |Select - Subscribe to a new Oracle Integration License|
 | Message Packs |1|
 | Access Token | If this field is displayed, you are creating an instance as a non-federated user. Sign in as a federated user and restart creating an instance.|

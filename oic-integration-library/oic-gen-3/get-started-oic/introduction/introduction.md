@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, we shall talk about provisioning Oracle Integration instance, enabling File Server and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration. You will learn how to create an integration flow that reads a file from the File Server and insert records into Oracle Autonomous Database.
+In this workshop, we shall talk about provisioning Oracle Integration instance, enabling File Server, provisioning Oracle Autonomous Database and then how to create  connections for File Server and Oracle Autonomous Database using Oracle Integration. You will learn how to create an integration flow that reads a file from the File Server and bulk import into Oracle Autonomous Database.
 
 Estimated Time: 1 hour 30 minutes
 
@@ -11,6 +11,8 @@ Estimated Time: 1 hour 30 minutes
 In this workshop, you will learn how to:
 
 * Provision Oracle Integration in Oracle Cloud Infrastructure
+* How to enable the File Server in Oracle Integration instance.
+* Provision Oracle Autonomous Database in Oracle Cloud Infrastructure
 * Learn several Integrations specific concepts
 * Creating Connections
 * Design a Scheduled Integration Flow
@@ -52,4 +54,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 * **Author** - Kishore Katta, Technical Director, Oracle Integration Product Management
 * **Author** - Subhani Italapuram, Technical Director, Oracle Integration Product Management
-* **Last Updated By/Date** - Subhani Italapuram, July 2022
+* **Last Updated By/Date** - 

@@ -47,13 +47,13 @@ Submit an Adhoc run of Scheduled Integration Flow
 
     ![Submit Schedule Flow](images/submit-schedule-flow.png)
 
-3. Select **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
+3. Click on **Instance id** in the Confirmation Window which will Navigate to the **Tracking** page.
 
-    **Note:** Alternatively, in the Integration navigation pane, click **Home > Monitoring > Integrations > Tracking**
+    **Note:** Alternatively, in the Integration navigation pane, Go to **Home page > Observability > Instances**
 
     ![Cofirmation Window](images/submit-confirmation.png)
 
-4.  From the *Track Instances* page Hover on the Integration Flow and Select the **Primary  Identifier**
+4.  From the *Instances* page, Click on the Integration Flow.
 
    ![Open the Integration Instance](images/integration-instance-open.png)
 
@@ -61,13 +61,13 @@ Submit an Adhoc run of Scheduled Integration Flow
 
     ![Completed integration flow](images/completed-integration-flow.png)
 
-4. Click on the **Actions** menu on the top right of the screen, and select **View Activity Stream**.
+4. Click on the **Activity Stream**.
 
      ![Open Activity Stream](images/open-activity-stream.png)
 
 5. In the Activity Steam window, click on the different **Message** links to review the flow of request and response messages.
 
-6. Click **Close** after reviewing the Activity Stream.
+6. Click on the **Activity Stream** again to close the activity stream.
 
 
 ## Task 3: Verify sales orders records in ADW Table
@@ -97,7 +97,7 @@ Follow these steps to view the sales orders record in the designated DB table.
 
     ![Enter DB password](../setup/images/enter-password.png)
 
-6. The Database Actions page opens. In the *Development* box, click **SQL**.
+6. The Database Actions page opens. In the *Development* box, click **SQL** or right click on **SQL** and click on **Open Link in New Tab**.
 
     ![Open SQL](../setup/images/open-sql.png)
 
@@ -133,4 +133,5 @@ Verify sales orders file archived in OCI Object storage
 
 ## Acknowledgements
 * **Author** - Kishore Katta, Product Management - Oracle Integration
-* **Last Updated By/Date** - Kishore Katta, May 2022
+* **Author** - Subhani Italapuram, Product Management - Oracle Integration
+* **Last Updated By/Date** - 

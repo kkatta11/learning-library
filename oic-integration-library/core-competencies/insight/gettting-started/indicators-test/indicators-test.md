@@ -4,14 +4,15 @@
 
 The Lab will cover how to test the process integration mapped indicators. How to view the test in the Insight Console and some of the standard dashboard views.
 
-Estimated Lab Time: 10 minutes
+Estimated Time: 10 minutes
 
 More info on Insight Models can be found [here](https://docs.oracle.com/en/cloud/paas/integration-cloud/user-int-insight-oci/work-models-integration-insight.html).
 
 ## Prerequisites
 
 This lab assumes you have:
- - Completed Labs 1 through 9
+
+- Completed Labs 1 through 9
 
 ## Learning Objectives
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-While the Console page displays information about performance and preconfigured Dashboards show nominal information. You can create a custom Dashboard to help identify bottlenecks or shortages in the process and track key metrics immediately and in real time. <br />
+The Console page displays information about performance and preconfigured Dashboards show nominal information. You can create a custom Dashboard to help identify bottlenecks or shortages in the process and track key metrics immediately and in real time. <br />
 ![Dashboard](./images/feb2021-opp-order-console.jpg " ") <br />
 
 Estimated Time: 15 minutes
@@ -52,7 +52,7 @@ First practice the steps to familiarize yourself with the commands and then do t
             b. Select the <Aggregation Function>, you may select the box to "ignore empty values", if available 
             c. Select the <Grouping>, you may select the box to "ignore empty values", if available
 
- Now let's get you to create on of each chart!
+ Now, let's get you to create on of each chart!
 
  You will create one of each chart type. You will test your mapping and then view the results of the order(s) in the created Console and Dashboards.
 

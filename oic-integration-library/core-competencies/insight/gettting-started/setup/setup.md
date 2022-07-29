@@ -3,7 +3,7 @@
 ## Introduction
 This lab walks you through the setup required to complete this demo workshop.
 
-Estimated Lab Time: 5 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 

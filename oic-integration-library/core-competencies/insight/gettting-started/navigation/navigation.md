@@ -4,7 +4,7 @@
 
 The workshop will cover how to navigate to Insight and the command fields you will experience while working with a model.
 
-Estimated Workshop Time: 5 Minutes
+Estimated Time: 5 Minutes
 
 ## Introduction
 

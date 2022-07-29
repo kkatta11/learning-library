@@ -83,7 +83,7 @@ As taught, each Model needs an Initial and Terminal Milestone. For your Initial 
 
 ## Task 3: Create an Identifier
 
-Finish your Draft Model by creating an Identifier. The Identifier name is  **Order Number**,  for Milestone select  **Order Received**, the Data Type is **String** and **Order Completed** Milestones.
+Finish your Draft Model by creating an Identifier. The Identifier name is  **Order Number**,  for Milestone select  **Order Received**, the Data Type is **String**. Click "Assign to Another Milestone" and select **Order Completed** Milestone.
 Save and Close your Draft Model.
 
 Great job creating your Draft Model.<br />

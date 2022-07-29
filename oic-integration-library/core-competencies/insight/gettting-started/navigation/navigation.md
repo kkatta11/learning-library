@@ -62,7 +62,7 @@ In the *Dashboards* canvas, starting left to right, you will see the search tool
 
 Top right side, you will see the Console Manifest, Import, Create and the three dots, which displays the Console Details. Lastly, you will see blocks with the dashboards displays as built within the model.
 
-You may now **Proceed to the next lab**
+You may now **proceed to the next lab**
 
 ## Want to Learn More
 

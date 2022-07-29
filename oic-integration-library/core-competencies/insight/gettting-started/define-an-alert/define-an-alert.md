@@ -9,6 +9,7 @@ Estimated Time: 25 minutes
 ## Prerequisites
 
 This lab assumes you have:
+
 - Completed Labs 1 through 11
 
 ## Learning Objectives
@@ -49,7 +50,6 @@ First practice the steps to familiarize yourself with the commands and then do t
              In the notification email that the recipient receives, the indicator placeholders in subject and body are replaced with the actual values. The link placeholder is replaced with a clickable link to the Business Transaction Details dashboard. For those indicators whose values are not available, their placeholders will be replaced with the text [Not Available].
         6. Click <Done> and <Save>
 
-
 Now that we have instructed you on how to create an alert, it's your turn.
 
 You will be using your existing Active Model. You will be creating alerts by adding new milestones, indicators and add an alert for them. You will be testing your alert as well.
@@ -76,7 +76,7 @@ Save and Close.
 ## Task 5: Map Milestone and Indicators
 
 Now, you need to map the *Backordered* Milestone *ON Exit* event to the *Backordered* activity. Set the *Order Number* Identifier Extraction Criteria for the *Backordered* Milestone to *$Backordered Quantity*. Map the *Backordered* Milestone Indicators by setting the *Backordered Quantity* Indicator Extraction Criteria to *$BackorderedQuantity*.
-Save your work. 
+Save your work.
 
 Verify your Insight Model is in the Configured state and then Activate you Insight Model.
 
@@ -96,7 +96,9 @@ Open the Integration named **Order Processing Lab** in Test.  Invoke the *OrderR
 } 
     </copy>
 ```
+
 Wait at least 1 minute and invoke the *shipping* operation by copying the following information:
+
 ```
     <copy>
 {  
@@ -107,13 +109,13 @@ Wait at least 1 minute and invoke the *shipping* operation by copying the follow
     </copy>
 ```
 
-Go to your email and verify you received 2 emails. One with the subject: **Backordered Quantity exceeded threshold** , and another with the subject: **Backorder has delayed shipping**. 
+Go to your email and verify you received 2 emails. One with the subject: **Backordered Quantity exceeded threshold** , and another with the subject: **Backorder has delayed shipping**.
 
 Try running some of your own test instances (Order Id 1000+ are reserved for lab test data)
 
 ## Summary
 
-Congratulation in completing this Lab.
+Congratulation in completing this Workshop.
 
 ## Learn More
 
@@ -121,5 +123,5 @@ More about key concepts and terminology can be found at [https://docs.oracle.com
 
 ## Acknowledgements
 
-* **Author** - Lucy Cortez, Product Enablement Management - Oracle Integration
-* **Last Updated By/Date** - Lucy Cortez, April 2022
+- **Author** - Lucy Cortez, Product Enablement Management - Oracle Integration
+- **Last Updated By/Date** - Lucy Cortez, April 2022

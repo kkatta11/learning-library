@@ -42,7 +42,7 @@ Dimensions, icon is blocks provide a type of grouping and categorization of busi
     A. Measures
         1. Click on Measures <Gastank> Tab 
         2. Enter the Measure Name
-        3. Enter the measure description, this will expand the field area
+        3. Enter the Measure Description, this will expand the field area
         4. From the Milestone dropdown select the Milestone         
         5. Select Data Type from dropdown (String, Integer,Float, or Decimal)
         6. Filterable: Mark the box if you want to use the indicator as filter criteria in dashboards

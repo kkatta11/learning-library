@@ -9,11 +9,13 @@ Estimated Time: 10 minutes
 ## Prerequisites
 
 This lab assumes you have:
+
 - Completed Labs 1 through 6
 
 ## Learning Objectives
 
 In this lab, you will learn how to create the following:
+
 - Console Views
 - Standard Dashboards
 - Map Testing

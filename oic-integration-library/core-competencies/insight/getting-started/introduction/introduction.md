@@ -22,7 +22,7 @@ Insight can collect metrics from business processes that are implemented using i
 
 * A web-based interface to:
 
-    * Model a business process, including milestones and indicators defined to extract specific metrics. For example, an order process starts with an initial milestone Order Received, which provides metrics for an order, such as number of items, model ordered, shipping address, and shipping type. Each step of the order is represented by either a standard milestone (for example, Order Shipped) or error milestone (Payment Declined), and completed with a terminal milestone (Order Completed) or a terminal error (Order Returned).
+  * Model a business process, including milestones and indicators defined to extract specific metrics. For example, an order process starts with an initial milestone Order Received, which provides metrics for an order, such as number of items, model ordered, shipping address, and shipping type. Each step of the order is represented by either a standard milestone (for example, Order Shipped) or error milestone (Payment Declined), and completed with a terminal milestone (Order Completed) or a terminal error (Order Returned).
 
     * Map milestones to integration flows or process applications (or both) through an intuitive designer view, and extract metrics values from the payload.
 
@@ -40,7 +40,7 @@ In this workshop, you will:
 
 * Comprehend Insight basic navigation, terminology and key concepts
 * Create a model, defining milestone(s), a unique instance identifier, and alert(s)
-* Associate model to a business process by mapping model milestone(s) to the business process implementation.
+* Associate model to a business process by mapping model milestone(s) to the business process implementation
 * Activate the model to view and analyze business processes in real time using dashboard
 * Drag and Drop key business milestones to coordinate activities in context of SLAs
 * Create a pre-configured or custom dashboards to track metrics, ratios and trends
@@ -52,7 +52,7 @@ This workshop requires an active "Oracle Account" and a LiveLabs reservation as 
 
 Insight is available within Oracle Integration Generation 2 and Oracle Integration for Oracle SaaS Generation 2. However, please note that the Standard Edition does not and would need to update your license type to access.
 
-Please contact your _________________, if needed for an upgrade.
+Please contact your administrator for an upgrade.
 
 See **[Editing the Edition, License Type, Message packs and Custom Endpoint of an Instance](https://docs.oracle.com/en/cloud/paas/integration-cloud/oracle-integration-oci/editing-edition-license-type-and-message-packs-instance.html)** in Provisioning and Administrating Oracle Integration and Oracle Integration for SaaS, Generation 2.
 
@@ -60,7 +60,7 @@ See **[Editing the Edition, License Type, Message packs and Custom Endpoint of a
 * An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported
 
 
-*Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
+**Note:** If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
 
 You may now **proceed to the next lab**.
 
@@ -71,6 +71,7 @@ You may now **proceed to the next lab**.
 * [https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-insight.html](http://docs.oracle.com)
 
 ## Acknowledgements
+
 * **Author** - Lucy Cortez Product Enablement Manager OIC
 * **Contributors** - Ravi Chablani, Product Management - Oracle Integration
 * **Last Updated By/Date** - Ravi Chablani, April 2022

@@ -47,7 +47,7 @@ In Consoles, starting left to right, you will see the search tool, filter tool, 
 
 ![Consoles page](./images/consolepage.jpg)
 
-Consoles are created once you activate a model and will have different icons next to the respective titles. You will see the Name, Favorite start, its Status, the Status Last Updated date/timestamp and Today's Business Transactions.
+Consoles are created once you activate a model and will have different icons next to the respective titles. You will see the Name, Favorite star, Status, the Status Last Updated date/timestamp and Today's Business Transactions.
 
 ![consolepage2](./images/consolepage2.jpg " ")
 
@@ -56,9 +56,9 @@ Consoles are created once you activate a model and will have different icons nex
 
 Open Dashboards via clicking on a Console name to open its related Dashboard.
 
-![Dashboards](./images/feb2021-opp-order-console.jpg " ")
-
 In the *Dashboards* canvas, starting left to right, you will see the search tool, filter tool, All Dropdown (where you can locate pre-configured or create a custom Dashboard), Rearrange Dashboard, Embed Dashboard, Search Order Number, View All, Purge Console Data, and Refresh.
+
+![Dashboards](./images/feb2021-opp-order-console.jpg " ")
 
 Top right side, you will see the Console Manifest, Import, Create and the three dots, which displays the Console Details. Lastly, you will see blocks with the dashboards displays as built within the model.
 

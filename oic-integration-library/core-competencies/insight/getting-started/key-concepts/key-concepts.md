@@ -4,7 +4,7 @@
 
 The Lab will cover Oracle Integration Insight key concepts and terminology for each stage of building, activating, mapping a model and Console.
 
-Estimated Time: 15 minutes.
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -17,7 +17,7 @@ In this lab, you will:
 
 This lab assumes you have:
 
-* Completed Labs 1 and 2 
+* Completed Labs 1 and 2
 * Oracle Integration - Enterprise edition
 * An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
 
@@ -108,7 +108,7 @@ You can configure the Alert notification email to include the Unique Instance Id
 
 *Instances* represent the activity of the associated Insight Model. A single Instance is a unique occurrence of the business process that the Model defines. To a Business Executive, an instance is a *business transaction*.
 
-An Instance always begins when the Model's Initial Milestone is passed and always ends when one of the Model’s Terminal or Terminal Error Milestones is passed. This activity is more commonly described using the model-specific **Business Transaction Label** and **Business Transactions Label** values that represent singular and plural terms, respectively, that are understandable by Business Executives, such as "Order" and "Orders".
+An Instance always begins when the Model's Initial Milestone is passed and always ends when one of the Model’s Terminal or Terminal Error Milestones is passed. This activity is more commonly described using the model-specific **Business Transaction Label** and **Business Transactions Labels** values that represent singular and plural terms, respectively, that are understandable by Business Executives, such as "Order" and "Orders".
 
 You may now **proceed to the next lab**.
 

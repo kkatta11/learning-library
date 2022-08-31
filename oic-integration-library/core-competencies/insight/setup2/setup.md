@@ -23,7 +23,9 @@ This lab assumes you have:
 
 On your Oracle Integration instance, import and install the data loader package to deploy and configure the integration and associated resources.
 
-1. Download the file  
+1. At the Home Page, Click on Integrations and Click Import
+
+    ![Import screen](images/import-screen.png)
 
 2. Click **Search All**.
 

@@ -27,7 +27,7 @@ On your Oracle Integration instance, import and install the data loader package 
 
     ![Import screen](images/import-screen.png)
 
-2. Click **Search All**.
+2. The Import Integration will display. Choose your file 
 
 3. Enter `Order Process` in the search field located on the top left side of the screen, then press **Enter**.
 

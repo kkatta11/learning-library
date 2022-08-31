@@ -14,7 +14,7 @@ The Integration Insight feature (commonly referred to as Insight) is located in 
 
 This lab assumes you have:
 
-* Completed Labs 1 thru 3 
+* Completed Labs 1 thru 3
 
 ## Objectives
 
@@ -23,11 +23,13 @@ In this workshop, you will:
 * Navigate Insight
 
 ## Task 1: Main Page
+
 Click the hamburger at the top left hand site of the home screen. Then, select **Insight** to open the Consoles and Models.
 
 ![Open Insight](./images/insight.jpg)
 
 ## Task 2: Models
+
 On the *Insight* page, click on **Models** to commence creating or modifying models.
 
 ![Open Insight Models page](./images/models.jpg)
@@ -35,7 +37,6 @@ On the *Insight* page, click on **Models** to commence creating or modifying mod
 In *Models*, starting left to right, you will see the search tool, filter tool, refresh, list horizontal, and list by block. Above that you will see the Import button or Create button.
 
 ![Models page](./images/modelpage.jpg " ")
-
 
 ## Task 3: Consoles
 
@@ -50,7 +51,6 @@ In Consoles, starting left to right, you will see the search tool, filter tool, 
 Consoles are created once you activate a model and will have different icons next to the respective titles. You will see the Name, Favorite star, Status, the Status Last Updated date/timestamp and Today's Business Transactions.
 
 ![consolepage2](./images/consolepage2.jpg " ")
-
 
 ## Task 4: Dashboards
 
@@ -70,6 +70,7 @@ You may now **proceed to the next lab**
 * [https://docs.oracle.com/en/cloud/paas/integration-cloud/integration-insight.html](http://docs.oracle.com)
 
 ## Acknowledgements
+
 * **Author** - Lucy Cortez, Product Enablement Manager, OIC
 * **Contributors** -  Nathan Angstadt, Senior Director, Oracle Integration Product Management
 * **Last Updated By/Date** - Ravi Chablani, April 2022

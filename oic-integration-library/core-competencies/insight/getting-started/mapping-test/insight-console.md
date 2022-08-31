@@ -27,12 +27,15 @@ The Consoles page shows the status of all business processes and includes a high
 Consoles can be accessed either fromm the Oracle Integration navigational pane or from the Insight tile on the Oracle Integration home page. Consoles names are the same as the Model name or Business Process that was mapped.
 
 Double-click on a dashboard to open the Business Transaction Details dashboard for that dashboard. The following dashboards support drilling down into the transaction details:
-* **Passed Milestones**: Double-click any milestone bar to show the business transactions (instances) that have passed that milestone.
-* **Milestones Summary**: Double-click any milestone bubble to show the business transactions (instances) associated with the milestone.
-* **Active Transactions**: Double-click any business transaction bar to show the active business transactions. Because a business transaction state may change between the time the dashboard displayed and the time you clicked a bar, you may not see the same business transactions on the Business Transaction Details dashboard.
-* **Transaction Errors**: Double-click any slice on the pie chart to show the business transactions in Error state.
-* **Avg. Transaction Completion Time**: Double-click any bubble on the bubble chart to show the business transactions in Successful or Failed state, depending on the bubble you clicked.
+
+- **Passed Milestones**: Double-click any milestone bar to show the business transactions (instances) that have passed that milestone.
+- **Milestones Summary**: Double-click any milestone bubble to show the business transactions (instances) associated with the milestone.
+- **Active Transactions**: Double-click any business transaction bar to show the active business transactions. Because a business transaction state may change between the time the dashboard displayed and the time you clicked a bar, you may not see the same business transactions on the Business Transaction Details dashboard.
+- **Transaction Errors**: Double-click any slice on the pie chart to show the business transactions in Error state.
+- **Avg. Transaction Completion Time**: Double-click any bubble on the bubble chart to show the business transactions in Successful or Failed state, depending on the bubble you clicked.
+
 ### Access the Console
+
     A. Go to Integration Insight    
         1. Click Insight
         2. Click Console
@@ -40,6 +43,7 @@ Double-click on a dashboard to open the Business Transaction Details dashboard f
 Testing your mappings is vital. Ensuring that the mapped item function correctly and provide needed information in the console.  
 
 ### Map Testing
+
     A.  Access Integrations  
         1. Hover over the Status and the Run icon (forward arrow) will appear
             a. Select from dropdown the Operation you wish to test. 
@@ -56,7 +60,7 @@ Testing your mappings is vital. Ensuring that the mapped item function correctly
 
 Now your turn to try!
 
- You will test you mapping and then view the results of the order in the created Console and Dashboard. 
+ You will test you mapping and then view the results of the order in the created Console and Dashboard.
 
 ## Task 1: Test Mapping
 
@@ -80,7 +84,7 @@ You will need to open the Console page to verify.
 ## Task 2: Console View
 
 Access the Console to view your Console named ***My Order Process**. Click on Console Manifest to view the names of the dashboards. You wil see both the dropdowns for the Dashboard names and the Filter Details which showcases the Milestones and the Identifier.
-    
+
 ## Task 3: Dashboard View
 
 Review the 5 Preconfigured Dashboards named **Milestone Summary**, **Passed Milestones**, **Active Business Transactions**, **Business Transaction**, **Errors** and **Avg. Business transaction Completion Time**.
@@ -94,5 +98,5 @@ More info on Insight Models can be found [here](https://docs.oracle.com/en/cloud
 
 ## Acknowledgements
 
-* **Author** - Lucy Cortez, Product Enablement Management - Oracle Integration
-* **Last Updated By/Date** - Lucy Cortez, April 2022
+- **Author** - Lucy Cortez, Product Enablement Management - Oracle Integration
+- **Last Updated By/Date** - Lucy Cortez, April 2022
